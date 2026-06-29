@@ -8,12 +8,8 @@ struct ReadingMaterial reading_material_table[TOTAL_READING_MATERIALS] = {
         /* BODY ----------------------------------------------------------- */
             "Greetings!\n"
             "\n"
-            "Thank you for buying "
-            #ifdef PARADISE
-            "Rhythm Paradise Advance.\n"
-            #else
+            "Thank you for buying\n"
             "Rhythm Heaven Advance.\n"
-            #endif
             "Oh... you've borrowed it from a friend?\n"
             "Or is it... s-secondhand?\n"
             "Well, that's beside the point.\n"
@@ -302,15 +298,9 @@ struct ReadingMaterial reading_material_table[TOTAL_READING_MATERIALS] = {
             "RM: Right!? It was enough to make me yell...\n"
             "DJ: You were like, \"Wait a sec, we LOST SOME!\"\n"
             "RM: Uh... Yeah! How do you know that?\n"
-            #ifdef PARADISE
-            "DJ: I've been playing Rhythm Paradise Advance\n"
-            "Roll the commercial!\n"
-            "AD: UP your flow with Rhythm Paradise Advance!\n"
-            #else
             "DJ: I've been playing Rhythm Heaven Advance!\n"
             "Roll the commercial!\n"
             "AD: UP your flow with Rhythm Heaven Advance!\n"
-            #endif
             "Available now! Game and system sold separately.\n"
             "\n"
             "End.",
@@ -326,40 +316,13 @@ struct ReadingMaterial reading_material_table[TOTAL_READING_MATERIALS] = {
         /* BODY ----------------------------------------------------------- */
             "TheÅôBon Odori\n"
             "\n"
+			"\n"
             "Vocals: Ami Tokito\n"
-            "Lyrics/Music: TsunkuÅâ\n"
-            "Arrangement: Koichi Yuasa (TheÅôBon Odori) /\n"
-            "Kaoru Okubo (TheÅôBon Dance)\n"
-            "Translation: castIeRook, Mizuka Lover\n"
+            "Song: TsunkuÅâ\n"
+            "Arrangement: Koichi Yuasa, Kaoru Okubo\n"
             "\n"
-            "(This song appears in TheÅôBon Odori.)\n"
-            "Haa~\n"
-            "            Hanabi agare ba~\n"
-            "Haa~ Ah~\n"
-            "            Kansei agaru~\n"
-            "\n"
-            "Haa~\n"
-            "            Ninki agare ba~\n"
-            "Haa~ Ah~\n"
-            "            Kyuuryou agaru~\n"
-            "Matsuri da wasshoi!\n"
-            "Nippon chuu ga wasshoi!\n"
-            "\n"
-            "Sore hikkuri kaette Dondo pan pan\n"
-            "Haa~ Bon Odori~\n"
-            "\n"
-            "Haa~\n"
-            "            Ame ga agare ba~\n"
-            "\n"
-            "Haa~ Ah~\n"
-            "            Yagura ni agaru~\n"
-            "\n"
-            "Hora! Matsuri da wasshoi!\n"
-            "Korezo made in JaPAN\n"
-            "\n"
-            "Sore hikkuri kaette Dondo pan pan\n"
-            "Haa~ Bon Odori~\n"
-            "----------------------------------------------\n"
+            "(This song appears in\n"
+            "TheÅôBon Odori.)\n"
             "Haa~\n"
             "            Oh when the fireworks fly~\n"
             "Haa~ Ah~\n"
@@ -398,13 +361,13 @@ struct ReadingMaterial reading_material_table[TOTAL_READING_MATERIALS] = {
         /* BODY ----------------------------------------------------------- */
             "Honey Sweet Angel of Love\n"
             "\n"
-            "English Vocals: Bellajenna\n"
-            "Japanese Vocals: Ami Tokito\n"
-            "Lyrics/Music: TsunkuÅâ\n"
+			"\n"
+            "Vocals: Bellajenna\n"
+            "Song: TsunkuÅâ\n"
             "Arrangement: Hideyuki \"Daichi\" Suzuki\n"
-            "Translation: castIeRook\n"
             "\n"
-            "(This song appears in Remix 3.)\n"
+            "(This song appears in\n"
+            "Remix 3.)\n"
             "Love has a charming flow\n"
             "Love has mysterious glow\n"
             "Love's many shapes and degrees\n"
@@ -450,13 +413,13 @@ struct ReadingMaterial reading_material_table[TOTAL_READING_MATERIALS] = {
         /* BODY ----------------------------------------------------------- */
             "WISH - Can't Wait for You\n"
             "\n"
-            "English Vocals: Roxby\n"
-            "Japanese Vocals: Soshi Tanaka\n"
-            "Lyrics/Music: TsunkuÅâ\n"
+			"\n"
+            "Vocals: Roxby\n"
+            "Song: TsunkuÅâ\n"
             "Arrangement: Koichi Yuasa\n"
-            "Translation: castIeRook, saladplainzone\n"
             "\n"
-            "(This song appears in Remix 5.)\n"
+            "(This song appears in\n"
+            "Remix 5.)\n"
             "I can't keep waiting forever\n"
             "Tonight we'll say our goodbyes\n"
             "I wish I loved you more when you were by my side\n"
@@ -517,11 +480,7 @@ struct ReadingMaterial reading_material_table[TOTAL_READING_MATERIALS] = {
             "Such a feat certainly is impressive! ...is how I should\n"
             "be congratulating you, but I won't.\n"
             "You have performed outstandingly here in\n"
-            #ifdef PARADISE
-            "Rhythm Paradise Advance.\n"
-            #else
             "Rhythm Heaven Advance.\n"
-            #endif
             "\n"
             "That much is undeniable, and we fully recognize it.\n"
             "You are the best! One of the greatest! ...is how I feel,\n"
@@ -657,11 +616,7 @@ struct ReadingMaterial reading_material_table[TOTAL_READING_MATERIALS] = {
             "Voices of Joy",
         /* BODY ----------------------------------------------------------- */
             "We've received many letters from satisfied\n"
-            #ifdef PARADISE
-            "players of Rhythm Paradise Advance.\n"
-            #else
             "players of Rhythm Heaven Advance.\n"
-            #endif
             "\n"
             "So, SO many in fact(!), that we can't show all of them,\n"
             "but here are just a few of our players' thoughts!\n"
@@ -673,11 +628,7 @@ struct ReadingMaterial reading_material_table[TOTAL_READING_MATERIALS] = {
             "\n"
             "\0031" "\001m" "I've become... popular?\n"
             "\0030" "\001s" "\n"
-            #ifdef PARADISE
-            "Before I found Rhythm Paradise Advance,\n"
-            #else
             "Before I found Rhythm Heaven Advance,\n"
-            #endif
             "I had no luck with women, but now I'm a real hot shot\n"
             "with a new lease on life!\n"
             "\n"
@@ -687,11 +638,7 @@ struct ReadingMaterial reading_material_table[TOTAL_READING_MATERIALS] = {
             "\0031" "\001m" "I've become...\n"
             "\0031" "\001R" "a better singer?"
             "\0030" "\001s" "\n"
-            #ifdef PARADISE
-            "\001L" "Before I found Rhythm Paradise Advance,\n"
-            #else
             "\001L" "Before I found Rhythm Heaven Advance,\n"
-            #endif
             "I was the textbook definition of tone-deaf,\n"
             "but lately people have told me my singing is much nicer!\n"
             "I'm still tone deaf, of course, but at least I'm happy!\n"
@@ -1044,6 +991,7 @@ struct ReadingMaterial reading_material_table[TOTAL_READING_MATERIALS] = {
             /* BGM */ &reading_style_haiku_bgm
         /* ---------------------------------------------------------------- */
     },
+<<<<<<< Updated upstream
 
     /* READING_MATERIAL_CREDITS */ {
         /* TITLE ---------------------------------------------------------- */
@@ -1147,3 +1095,6 @@ struct ReadingMaterial reading_material_table[TOTAL_READING_MATERIALS] = {
         /* ---------------------------------------------------------------- */
     }
 };
+=======
+};
+>>>>>>> Stashed changes
