@@ -45,7 +45,6 @@ static u16 D_0300131e_padding; // unused
 static s8 sCurrentCampaign; // Current Perfect Campaign ID
 static u16 D_03001322_padding; // unused
 static u8 sPlayCreditsAfterEpilogue; // Currently playing through Remix 6 for the first time.
-COMMON_DATA u8 sReplayingCampaign = FALSE;
 
 
 extern u32 D_03005590; // Unused
@@ -65,7 +64,7 @@ void enable_game_select_2_bgm(void) {
 
 // Play Game Select Music
 void play_game_select_bgm(void) {
-    if (sPlayAltBGM && !CHECK_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_USE_ALT_GAME_SELECT_MUSIC)) {
+    if (sPlayAltBGM) {
         set_beatscript_tempo(105);
         scene_set_music(&s_shibafu2_bgm_seqData);
         sPlayAltBGM = FALSE;
