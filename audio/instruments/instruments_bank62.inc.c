@@ -358,7 +358,6 @@ struct InstrumentPCM instrument_pcm_1711 = {
     /* ADSR Rel  */ 0x1FC000,
 };
 
-#ifdef SFX
 extern struct SampleData RAPWOMEN_EN_sample_933_data;
 struct InstrumentPCM instrument_pcm_1712 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
