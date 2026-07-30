@@ -508,11 +508,7 @@ struct InstrumentPCM instrument_pcm_0112 = {
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    #ifdef SFX
     /* Sample    */ &march_ord_13_data,
-    #else
-    /* Sample    */ &sample_079_data,
-    #endif
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
