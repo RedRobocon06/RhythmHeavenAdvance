@@ -80,11 +80,7 @@ struct InstrumentPCM instrument_pcm_0187 = {
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    #ifdef SFX
     /* Sample    */ &fireworks_count_one_data,
-    #else
-    /* Sample    */ &sample_131_data,
-    #endif
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
@@ -100,11 +96,7 @@ struct InstrumentPCM instrument_pcm_0188 = {
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    #ifdef SFX
     /* Sample    */ &fireworks_count_one_data,
-    #else
-    /* Sample    */ &sample_132_data,
-    #endif
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
@@ -120,11 +112,7 @@ struct InstrumentPCM instrument_pcm_0189 = {
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    #ifdef SFX
     /* Sample    */ &fireworks_count_two_data,
-    #else
-    /* Sample    */ &sample_133_data,
-    #endif
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
@@ -140,11 +128,7 @@ struct InstrumentPCM instrument_pcm_0190 = {
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    #ifdef SFX
     /* Sample    */ &fireworks_count_three_data,
-    #else
-    /* Sample    */ &sample_134_data,
-    #endif
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
@@ -160,11 +144,7 @@ struct InstrumentPCM instrument_pcm_0191 = {
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    #ifdef SFX
     /* Sample    */ &fireworks_count_go_data,
-    #else
-    /* Sample    */ &sample_135_data,
-    #endif
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
