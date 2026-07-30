@@ -209,6 +209,7 @@ struct InstrumentPCM instrument_pcm_0431 = {
 };
 
 extern struct SampleData RAPMEN_EN_sample_247_data;
+struct InstrumentPCM instrument_pcm_0432 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
