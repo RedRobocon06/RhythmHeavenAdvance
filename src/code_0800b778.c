@@ -418,10 +418,21 @@ void stop_beatscript_scene(void) {
     }
 }
 
+extern u8 haveSeenDisclaimer;
 
 // Set Tempo
 void set_beatscript_tempo(u16 tempo) {
     s32 speed;
+
+    if (tempo > 1000) {
+        tempo -= 1000;
+    } else if (!haveSeenDisclaimer) {
+        if (agb_random(2) == 0) {
+            tempo = agb_random(60) + 1;
+        } else {
+            tempo = agb_random(200) + 240;
+        }
+    }
 
     D_030053c0.scriptBaseBPM = tempo;
     if (D_030053c0.unk0_b6 && D_030053c0.unk0_b7) {
@@ -1043,7 +1054,7 @@ void func_0800c694(u32 arg) {
         arg = 24;
     }
 
-    func_08009564(arg);
+    rumble_request_pulse(arg);
 }
 
 
