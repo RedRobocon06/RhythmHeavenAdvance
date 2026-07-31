@@ -9,11 +9,7 @@
 script script_spaceball_2_entry
     set_tempo 124
     rest 24
-    #ifdef PLUS
     call script_spaceball_2_prologue
-    #else
-    call script_spaceball_prologue
-    #endif
     set_game_fade_in_time 16
     load_spaceball
     enable_play_inputs
@@ -28,6 +24,9 @@ script script_spaceball_2_entry
 stop
 
 define_gameplay_scene scene_spaceball_2, script_spaceball_2_entry
+
+.section .script.prologue
+@ Spaceball - Prologue
 
 script script_spaceball_2_prologue
     set_game_fade_in_time 8
