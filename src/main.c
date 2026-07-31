@@ -47,10 +47,6 @@ void func_08000224(void) {
 	init_key_listener();
 	init_time_keeper();
 	init_fast_udivsi3();
-#ifdef RUMBLE
-	rumble_backend_init();
-	rumble_init(3);
-#endif
 	init_math_sqrt();
 	mem_heap_init(get_memory_heap_start(), get_memory_heap_length());
 	task_pool_init();
@@ -124,14 +120,8 @@ void agb_main(void) {
 	REG_IME = 1;
 
 	func_0801d860(FALSE); // Init. Script Operator (Init. Static Variables)
-	#ifdef RUMBLE
-	init_scenes(&scene_warning);
-	set_scene_trans_target(&scene_warning, &scene_gbp_handshake);
-	set_scene_trans_target(&scene_gbp_handshake, (CHECK_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_SKIP_DISCLAIMER) ? INITIAL_SCENE : &scene_disclaimer));
-	#else
 	init_scenes(&scene_warning);
 	set_scene_trans_target(&scene_warning, (CHECK_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_SKIP_DISCLAIMER) ? INITIAL_SCENE : &scene_disclaimer));
-	#endif
     set_scene_trans_target(&scene_disclaimer, INITIAL_SCENE);
 
 	update_key_listener();
@@ -141,9 +131,6 @@ void agb_main(void) {
 		update_save_buffer_sram_writes();
 		get_agb_random_var();
 		update_key_listener();
-		#ifdef RUMBLE
-		rumble_backend_update();
-		#endif
 		D_030046a0 += 1;
 		process_scenes();
 
@@ -153,9 +140,6 @@ void agb_main(void) {
 			if ((keysPressed & RESET_BUTTON_COMBO) == RESET_BUTTON_COMBO) {
 				key_rec_set_mode(0, 0x3ff, 0, 0);
 				set_current_scene(&scene_soft_reset);
-				#ifdef RUMBLE
-				rumble_shutdown();
-				#endif
 				D_03004498 = FALSE;
 			}
 		}

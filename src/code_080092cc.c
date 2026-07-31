@@ -1,24 +1,10 @@
 #include "code_080092cc.h"
 #include "code_08001360.h"
-#ifdef RUMBLE
-#include "rumble_backend.h"
-#endif
 #include "memory.h"
 
 // Gyro/Rumble Library Interface
 
 #define RUMBLE_MAX_INTENSITY 0xFF
-
-#ifdef RUMBLE
-#define RUMBLE_MENU_MOVE_INTENSITY 96
-#define RUMBLE_MENU_CONFIRM_INTENSITY 120
-#define RUMBLE_MENU_CANCEL_INTENSITY 84
-#define RUMBLE_MENU_LIMIT_INTENSITY 72
-#define RUMBLE_MENU_LIMIT_PULSE_COUNT 2
-#define RUMBLE_MENU_LIMIT_GAP_TICKS 14
-#define RUMBLE_MENU_ERROR_INTENSITY 84
-#define RUMBLE_MENU_BONUS_INTENSITY 144
-#endif
 
 static struct struct_0300443c D_03001110;
 static s32 D_03001134[22]; // ..?
@@ -188,12 +174,6 @@ void func_08009548(void) {
 
 void rumble_request_pulse(u32 arg0) {
     s24_8 temp_r4;
-#ifdef RUMBLE
-    rumble_unlock_pattern_repeat();
-    rumble_clear_pattern();
-    rumble_begin_pulse(arg0);
-    return;
-#endif
     if (arg0 > RUMBLE_MAX_INTENSITY) {
         arg0 = RUMBLE_MAX_INTENSITY;
     }
@@ -207,45 +187,24 @@ void rumble_request_pulse(u32 arg0) {
 }
 
 void rumble_play_menu_move(void) {
-#ifdef RUMBLE
-    rumble_request_pulse(RUMBLE_MENU_MOVE_INTENSITY);
-#endif
 }
 
 void rumble_play_menu_confirm(void) {
-#ifdef RUMBLE
-    rumble_request_pulse(RUMBLE_MENU_CONFIRM_INTENSITY);
-#endif
 }
 
 void rumble_play_menu_cancel(void) {
-#ifdef RUMBLE
-    rumble_request_pulse(RUMBLE_MENU_CANCEL_INTENSITY);
-#endif
 }
 
 void rumble_play_menu_limit(void) {
-#ifdef RUMBLE
-    rumble_queue_pattern(RUMBLE_MENU_LIMIT_INTENSITY, RUMBLE_MENU_LIMIT_PULSE_COUNT, RUMBLE_MENU_LIMIT_GAP_TICKS);
-#endif
 }
 
 void rumble_play_menu_error(void) {
-#ifdef RUMBLE
-    rumble_queue_pattern(RUMBLE_MENU_ERROR_INTENSITY, RUMBLE_MENU_LIMIT_PULSE_COUNT, RUMBLE_MENU_LIMIT_GAP_TICKS);
-#endif
 }
 
 void rumble_play_menu_bonus(void) {
-#ifdef RUMBLE
-    rumble_request_pulse(RUMBLE_MENU_BONUS_INTENSITY);
-#endif
 }
 
 void rumble_play_long(void) {
-#ifdef RUMBLE
-    rumble_request_pulse(RUMBLE_MAX_INTENSITY);
-#endif
 }
 
 void func_080095a8(void) {
@@ -301,30 +260,22 @@ void func_08009668(u32 arg0) {
 }
 
 static void rumble_gpio_init(void) {
-#ifdef RUMBLE
-    return;
-#else
     REG_GPIO_CNT = 1;
     D_0300120c = 2 | 1;
     REG_GPIO_DATA = D_0300120c;
     D_0300120e = 2 | 1;
     D_0300120e |= 8;
     REG_GPIO_DIR = D_0300120e;
-#endif
 }
 
 static void rumble_set_hardware_state(u32 arg0) {
     if (!D_03001200) {
         arg0 = FALSE;
     }
-#ifdef RUMBLE
-    rumble_backend_set_state(arg0);
-#else
     REG_GPIO_CNT = 1;
     D_0300120c &= ~8;
     D_0300120c |= arg0 << 3;
     REG_GPIO_DATA = D_0300120c;
-#endif
 }
 
 static u32 rumble_clamp_intensity(u32 intensity) {
