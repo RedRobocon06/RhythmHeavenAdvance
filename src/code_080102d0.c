@@ -38,23 +38,23 @@ void reset_game_save_data(void) {
     data->recentLevelScore = DEFAULT_LEVEL_SCORE;
 
     for (i = 0; i < TOTAL_LEVELS; i++) {
-        set_level_state(data, i, LEVEL_STATE_HIDDEN);
-        set_level_score(data, i, DEFAULT_LEVEL_SCORE);
+        data->levelStates[i] = LEVEL_STATE_HIDDEN;
+        data->levelScores[i] = DEFAULT_LEVEL_SCORE;
     }
 
     unlock_default_studio_songs();
 
     for (i = 0; i < TOTAL_LEVELS; i++) {
-        set_level_total_plays(data, i, 0);
-        set_level_first_ok(data, i, 0);
-        set_level_first_superb(data, i, 0);
+        data->levelTotalPlays[i] = 0;
+        data->levelFirstOK[i] = 0;
+        data->levelFirstSuperb[i] = 0;
     }
 
     reset_all_replay_save_data(&data->drumReplaysAlloc);
     data->totalPerfects = 0;
 
     for (i = 0; i < TOTAL_PERFECT_CAMPAIGNS; i++) {
-        set_campaign_cleared(data, i, FALSE);
+        data->campaignsCleared[i] = FALSE;
     }
     data->campaignState = CAMPAIGN_STATE_INACTIVE;
 
@@ -81,12 +81,12 @@ void reset_game_save_data(void) {
     D_030046a8->data.unk294[3] = 10;    // High Score - Quiz Show EX
     D_030046a8->data.unk294[8] = DIRECTSOUND_MODE_STEREO; // Sound Mode
 
-    set_level_state(data, LEVEL_KARATE_MAN, LEVEL_STATE_OPEN);
-    set_level_state(data, LEVEL_CLAPPY_TRIO, LEVEL_STATE_CLOSED);
-    set_level_state(data, LEVEL_SPACEBALL, LEVEL_STATE_CLOSED);
-    set_level_state(data, LEVEL_RHYTHM_TWEEZERS, LEVEL_STATE_CLOSED);
-    set_level_state(data, LEVEL_MARCHING_ORDERS, LEVEL_STATE_CLOSED);
-    set_level_state(data, LEVEL_REMIX_1, LEVEL_STATE_CLOSED);
+    data->levelStates[LEVEL_KARATE_MAN] = LEVEL_STATE_OPEN;
+    data->levelStates[LEVEL_CLAPPY_TRIO] = LEVEL_STATE_CLOSED;
+    data->levelStates[LEVEL_SPACEBALL] = LEVEL_STATE_CLOSED;
+    data->levelStates[LEVEL_RHYTHM_TWEEZERS] = LEVEL_STATE_CLOSED;
+    data->levelStates[LEVEL_MARCHING_ORDERS] = LEVEL_STATE_CLOSED;
+    data->levelStates[LEVEL_REMIX_1] = LEVEL_STATE_CLOSED;
     data->drumKitsUnlocked[STUDIO_DRUM_STANDARD] = TRUE;
     data->readingMaterialUnlocked[READING_MATERIAL_WELCOME] = TRUE;
     data->readingMaterialUnlocked[READING_MATERIAL_MANUAL] = TRUE;
@@ -98,7 +98,5 @@ void reset_game_save_data(void) {
 
 // [func_08010478] Bulk Copy to Rhythm Tengoku Game Save Data
 void write_game_save_data(void) {
-#ifndef PLAYTEST
-    write_save_buffer_data_to_sram((void *)&D_030046a8->data, sizeof(struct TengokuSaveData));
-#endif
+    write_save_buffer_data_to_sram((void *)&D_030046a8->data, sizeof(struct TengokuSaveData) - sizeof(struct DrumReplaySaveAlloc));
 }
