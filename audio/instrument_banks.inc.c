@@ -31,7 +31,7 @@ union Instrument inst_bank_01[] = {
     /* 112 */ NULL,                            NULL,                            NULL,                            NULL,
     /* 116 */ NULL,                            NULL,                            NULL,                            { .pcm = &instrument_pcm_0013 },
     /* 120 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 124 */ { .rhy = &instrument_rhy_0013 }, { .rhy = &instrument_rhy_0014 }, { .rhy = &instrument_rhy_0015 }, { .rhy = &instrument_rhy_0016 }
+    /* 124 */ NULL,                            { .rhy = &instrument_rhy_0014 }, { .rhy = &instrument_rhy_0015 }, { .rhy = &instrument_rhy_0016 }
 };
 
 // 128 Instruments
