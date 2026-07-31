@@ -2,7 +2,6 @@
 #include "memory.h"
 #include "code_08003b28.h"
 #include "code_080092cc.h"
-#include "rumble_backend.h"
 #include "bitmap_font.h"
 #include "memory_heap.h"
 
