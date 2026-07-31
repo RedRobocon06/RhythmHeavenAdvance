@@ -7,9 +7,6 @@ static u16 sEWRAMMemoryHeapStart;
 static u16 sEWRAMMemoryHeapLength;
 static s32 unused_03000094; // unknown
 
-#define SRAM_SAVE_CHUNK_BYTES 0x100
-#define VBLANK_START_LINE 160
-
 extern u8 *save_memory_base; // CartRAMBase (0x0E000000)
 extern u8 *backup_save_memory_base; // CartRAMBase + 0x4000 (0x0E004000)
 extern char D_08935fbc[]; // "RIQ"
