@@ -3,7 +3,6 @@
 #include "graphics/main_menu/main_menu_graphics.h"
 
 #include "src/scenes/gameplay.h"
-#include "src/code_080092cc.h"
 
 
 /* MAIN MENU SCENE */
@@ -95,7 +94,6 @@ void main_menu_scene_paused(void *sVar, s32 dArg) {
 // Scene Update (Active)
 void main_menu_scene_update(void *sVar, s32 dArg) {
     s32 prevButton;
-    s32 requestedButton;
 
     gMainMenu->bgX += 1;
     gMainMenu->bgY -= 1;
@@ -103,29 +101,24 @@ void main_menu_scene_update(void *sVar, s32 dArg) {
 
     if (main_menu_scene_inputs_enabled()) {
         prevButton = sMainMenuButton;
-        requestedButton = sMainMenuButton;
         if (D_030053b8 & DPAD_UP) {
-            requestedButton -= 1;
+            sMainMenuButton -= 1;
         }
         if (D_030053b8 & DPAD_DOWN) {
-            requestedButton += 1;
+            sMainMenuButton += 1;
         }
-        sMainMenuButton = requestedButton;
         sMainMenuButton = clamp_int32(sMainMenuButton, GAME_SELECT, OPTIONS_MENU);
 
         if (prevButton != sMainMenuButton) {
             play_sound(&s_menu_cursor2_seqData);
             sprite_set_anim(gSpriteHandler, gMainMenu->buttons[prevButton], main_menu_button_off_anim[prevButton], 0, 1, 0, 0);
             sprite_set_anim(gSpriteHandler, gMainMenu->buttons[sMainMenuButton], main_menu_button_on_anim[sMainMenuButton], 0, 1, 0, 0);
-            rumble_play_menu_move();
-        } else if (requestedButton != prevButton) {
-            rumble_play_menu_limit();
         }
 
         else if (D_03004afc & (START_BUTTON | A_BUTTON)) {
             switch (prevButton) {
                 case GAME_SELECT:
-                    set_next_scene(((D_03004ac0 & LEFT_SHOULDER_BUTTON) && (D_03004ac0 & RIGHT_SHOULDER_BUTTON)) ? &scene_debug_menu : &scene_game_select);
+                    set_next_scene(&scene_game_select);
                     break;
                 case RHYTHM_TEST:
                     set_scene_trans_target(&scene_results_ver_score, &scene_main_menu);
@@ -150,7 +143,6 @@ void main_menu_scene_update(void *sVar, s32 dArg) {
             set_pause_beatscript_scene(FALSE);
             gMainMenu->inputsEnabled = FALSE;
             play_sound(&s_menu_kettei1_seqData);
-            rumble_play_menu_confirm();
         }
     }
 }
