@@ -536,14 +536,6 @@ s32 get_level_state_with_perfect_from_id(s32 id) {
 
     levelState = get_level_state(saveData, id);
 
-#ifdef PLUS
-    // make sure you don't overlay a perfect medal on top of a regular one if the perfect event is still pending
-    if (!game_select_has_pending_perfect_event(id)
-      && get_campaign_cleared(saveData, get_campaign_from_level_id(id))) {
-        levelState = LEVEL_STATE_PERFECT;
-    }
-#endif
-
     return levelState;
 }
 
