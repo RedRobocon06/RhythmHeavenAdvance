@@ -1945,29 +1945,6 @@ union Instrument inst_bank_63[] = {
 
 };
 
-// 76 Instruments
-union Instrument inst_bank_69[] = {
-    /* 000 */ NULL,                            { .pcm = &instrument_pcm_3084 }, { .pcm = &instrument_pcm_3085 }, NULL,
-    /* 004 */ { .pcm = &instrument_pcm_3079 }, { .pcm = &instrument_pcm_3080 }, { .pcm = &instrument_pcm_3081 }, { .pcm = &instrument_pcm_3082 },
-    /* 008 */ { .pcm = &instrument_pcm_3100 }, { .pcm = &instrument_pcm_3083 }, NULL,                            NULL,
-    /* 012 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 016 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 020 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 024 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 028 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 032 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 036 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 040 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 044 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 048 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 052 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 056 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 060 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 064 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 068 */ NULL,                            NULL,                            NULL,                            NULL,
-    /* 072 */ NULL,                            NULL,                            NULL,                            { .rhy = &instrument_rhy_1660 }
-};
-
 // 92 Instruments
 union Instrument inst_bank_70[] = {
     /* 000 */ NULL,                            NULL,                            NULL,                            NULL,
