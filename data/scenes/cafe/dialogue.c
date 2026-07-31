@@ -241,36 +241,6 @@ const char *cafe_dialogue_all_perfects_clear[] = {
 };
 
 
-// Dialogue - Extra Perfects Cleared
-const char *cafe_dialogue_extra_perfects_clear[] = {
-    /* ------------------------------------------------ */
-        "\n"
-        "blabla you finished the extra campaign!\n"
-        "\n",
-    /* ------------------------------------------------ */
-        "\n"
-        "it's so AWESOME!!\n"
-        "\n",
-    /* ------------------------------------------------ */
-    END_OF_DIALOGUE
-};
-
-
-// Dialogue - All Perfects Cleared (Main + Extra)
-const char *cafe_dialogue_all_perfects_clear_big[] = {
-    /* ------------------------------------------------ */
-        "\n"
-        "woohoo main & extra!\n"
-        "\n",
-    /* ------------------------------------------------ */
-        "\n"
-        "you finished the campaign!\n"
-        "\n",
-    /* ------------------------------------------------ */
-    END_OF_DIALOGUE
-};
-
-
 // [D_089cd348] Praise
     /* -------------------------------- */
         //
@@ -404,11 +374,7 @@ const char *cafe_dialogue_rhythm_sense[] = {
     /* ------------------------------------------------ */
         "\n"
         "When your sense of rhythm\n"
-        #ifdef PARADISE
-        "improves... that has to be\n"
-        #else
         "improves... that's gotta be\n"
-        #endif
         "euphoric, huh?",
     /* ------------------------------------------------ */
         "\n"
