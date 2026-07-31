@@ -2,7 +2,6 @@
 #include "data_room.h"
 #include "graphics/data_room/data_room_graphics.h"
 #include "src/scenes/reading.h"
-#include "src/code_080092cc.h"
 
 
 /* RHYTHM DATA ROOM SCENE */
