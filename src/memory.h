@@ -68,14 +68,14 @@ extern struct SaveBuffer {
         u8 playsUntilNextCampaign;
         u8 currentCampaign;
         u8 unk26A;
-        u8 readingMaterialUnlocked[TOTAL_BASE_READING_MATERIALS];
+        u8 readingMaterialUnlocked[20];
         u8 drumKitsUnlocked[15];
         u8 totalMedals;
         u8 unk28F;
         u8 minFailsForBaristaHelp;
         u8 unk291;
         u32 unk294[16];
-        /* why is this commented and not unpacked??????
+        /*
             u32 highScoreMrUpbeat;
             u32 highScoreMannequinFactory;
             u32 highScoreSickBeatsSP;
