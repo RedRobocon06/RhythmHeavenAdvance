@@ -14,6 +14,10 @@
 #include "src/midi/midi.h"
 #include "src/lib_0804ca80.h"
 #include "src/backdrop.h"
+#include "src/code_080092cc.h"
+#include "src/scenes/gameplay.h"
+#include "src/scenes/game_select.h"
+#include "src/memory.h"
 
 // Could use better split
 
