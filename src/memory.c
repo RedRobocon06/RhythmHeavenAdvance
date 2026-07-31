@@ -117,8 +117,16 @@ s32 copy_to_save_buffer(u8 *cartRAM) {
         return 1;
     }
 
-    if ((generate_save_buffer_checksum((s32 *)D_030046a8, SAVE_BUFFER_SIZE) - buffer->header.checksum) != buffer->header.checksum) {
+    if (calculate_save_buffer_checksum(buffer) != buffer->header.checksum) {
         return 2;
+    }
+
+    if (!extra_save_data_is_valid(&buffer->data.extraData)) {
+        reset_extra_save_data_defaults(&buffer->data);
+    }
+
+    if(buffer->data.totalMedals > MAX_MEDALS) {
+        buffer->data.totalMedals = MAX_MEDALS;
     }
     
     SET_ADVANCE_FLAG(buffer->data.advanceFlags, ADVANCE_FLAG_SAVE_CONVERTED);
@@ -138,12 +146,6 @@ s32 copy_sram_backup_to_save_buffer(void) {
 
 
 void flush_save_buffer(u8 *cartRAM) {
-    struct SaveBuffer *buffer = D_030046a8;
-
-    buffer->header.checksum = 0;
-    buffer->header.checksum = generate_save_buffer_checksum((s32 *)D_030046a8, SAVE_BUFFER_SIZE);
-
-    write_sram_fast((u8 *)D_030046a8, cartRAM, SAVE_BUFFER_SIZE);
 }
 
 
@@ -154,32 +156,34 @@ s32 get_offset_from_save_buffer(void *buffer) {
 
 void write_save_buffer_header_to_sram(u8 *cartRAM) {
     struct SaveBuffer *buffer = D_030046a8;
-    s32 bufferOffset = get_offset_from_save_buffer(buffer); // isn't this literally always 0
 
-    buffer->header.checksum = 0;
-    buffer->header.checksum = generate_save_buffer_checksum((s32 *)D_030046a8, SAVE_BUFFER_SIZE);
+    update_save_buffer_header(buffer);
+    write_sram_fast((u8 *)buffer, cartRAM, sizeof(buffer->header));
 
-    write_sram_fast((u8 *)D_030046a8 + bufferOffset, cartRAM + bufferOffset, 0x10);
+    if (sSramSaveWriteState.active && (sSramSaveWriteState.cartRAM == cartRAM)) {
+        sSramSaveWriteState.active = FALSE;
+    }
 }
 
 
 void write_save_buffer_data_to_sram(u8 *buffer, u32 size) {
-    s32 bufferOffset;
-
-    write_save_buffer_header_to_sram(save_memory_base);
-    bufferOffset = get_offset_from_save_buffer(buffer);
-
-    write_sram_fast((u8 *)D_030046a8 + bufferOffset, save_memory_base + bufferOffset, size);
 }
 
 
 void flush_save_buffer_to_sram(void) {
-	flush_save_buffer(save_memory_base);
 }
 
 
 void flush_save_buffer_to_sram_backup(void) {
 	flush_save_buffer(backup_save_memory_base);
+}
+
+
+void update_save_buffer_sram_writes(void) {
+}
+
+
+void finish_save_buffer_sram_writes(void) {
 }
 
 
