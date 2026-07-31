@@ -9107,66 +9107,6 @@ struct SongHeader s_f_marcher2_v_hidari_jp_seqData = {
     /* Song Number   */ 709
 };
 
-extern const u8 s_rat_paw_mid[];
-struct SongHeader s_rat_paw_seqData = {
-    /* MIDI Sequence */ s_rat_paw_mid,
-    /* Sound Player  */ SFX_PLAYER_0,
-    /* Bank Number   */ INST_BANK_6,
-    /* Volume        */ 100,
-    /* Priority      */ 80,
-    /* unk8          */ 0x40,
-    /* Song Title    */ s_rat_paw_seqName,
-    /* Song Number   */ 1935
-};
-
-extern const u8 s_f_boxing_hit_sfx_mid[];
-struct SongHeader s_f_boxing_hit_sfx_seqData = {
-    /* MIDI Sequence */ s_f_boxing_hit_sfx_mid,
-    /* Sound Player  */ SFX_PLAYER_5,
-    /* Bank Number   */ INST_BANK_56,
-    /* Volume        */ 120,
-    /* Priority      */ 90,
-    /* unk8          */ 0xff,
-    /* Song Title    */ s_f_boxing_hit_sfx_seqName,
-    /* Song Number   */ 1937
-};
-
-extern const u8 s_f_boxing_three_sfx_mid[];
-struct SongHeader s_f_boxing_three_sfx_seqData = {
-    /* MIDI Sequence */ s_f_boxing_three_sfx_mid,
-    /* Sound Player  */ SFX_PLAYER_5,
-    /* Bank Number   */ INST_BANK_56,
-    /* Volume        */ 120,
-    /* Priority      */ 90,
-    /* unk8          */ 0xff,
-    /* Song Title    */ s_f_boxing_three_sfx_seqName,
-    /* Song Number   */ 1938
-};
-
-extern const u8 s_f_boxing_two_sfx_mid[];
-struct SongHeader s_f_boxing_two_sfx_seqData = {
-    /* MIDI Sequence */ s_f_boxing_two_sfx_mid,
-    /* Sound Player  */ SFX_PLAYER_5,
-    /* Bank Number   */ INST_BANK_56,
-    /* Volume        */ 120,
-    /* Priority      */ 90,
-    /* unk8          */ 0xff,
-    /* Song Title    */ s_f_boxing_two_sfx_seqName,
-    /* Song Number   */ 1939
-};
-
-extern const u8 s_f_boxing_four_sfx_mid[];
-struct SongHeader s_f_boxing_four_sfx_seqData = {
-    /* MIDI Sequence */ s_f_boxing_four_sfx_mid,
-    /* Sound Player  */ SFX_PLAYER_5,
-    /* Bank Number   */ INST_BANK_56,
-    /* Volume        */ 120,
-    /* Priority      */ 90,
-    /* unk8          */ 0xff,
-    /* Song Title    */ s_f_boxing_four_sfx_seqName,
-    /* Song Number   */ 1940
-};
-
 extern const u8 s_guntai_v_susume_2_mid[];
 struct SongHeader s_guntai_v_susume_2_seqData = {
     /* MIDI Sequence */ s_guntai_v_susume_2_mid,
