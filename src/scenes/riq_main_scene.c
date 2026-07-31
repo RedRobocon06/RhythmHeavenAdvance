@@ -11,7 +11,6 @@
 
 static u8 D_0300155c;
 
-extern u8 haveSeenDisclaimer;
 
 /* GLOBAL RIQ SCENE */
 
@@ -514,14 +513,8 @@ FontPalette dev_text_font_pal2[] = {
 
 // Stop
 void soft_reset_scene_stop(void *endParam) {
-    finish_save_buffer_sram_writes();
     func_08000224();
-    if (haveSeenDisclaimer) {
-        set_next_scene(&scene_title);
-    } else {
-        set_next_scene(&scene_disclaimer);
-        set_scene_trans_target(&scene_disclaimer, &scene_title);
-    }
+    set_next_scene(&scene_title);
 }
 
 
