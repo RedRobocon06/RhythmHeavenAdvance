@@ -31,14 +31,15 @@ struct LevelData level_data_table[] = {
             /* OK        */ "Well, that's that. Let's eat!",
             /* SUPERB    */ "I think we've gone through everything!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* CLAPPY_TRIO */ {
         /* Entry Scene   */ &scene_clappy_trio,
         /* Level Name    */ "The Clappy Trio",
-        /* Level Desc.   */ "This world-famous trio\n"
-                            "never misses a beat.\n"
-                            "You're the third, so\n"
-							"watch the other two!",
+        /* Level Desc.   */ "Clap your hands in\n"
+                            "order! You're the third\n"
+                            "clapper. Keep an eye\n"
+							"on the other two!",
         /* Level Icon    */ 4,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_clappy_trio_gfx_tables,
@@ -61,8 +62,13 @@ struct LevelData level_data_table[] = {
         /* Epilogue Text */ {
             /* TRY_AGAIN */ "I spent everything I had on this outfit!",
             /* OK        */ "We were so close...",
+            #ifdef PARADISE
+            /* SUPERB    */ "Perfect sync! It must be the outfits, right?"
+            #else
             /* SUPERB    */ "Perfect sync! It's gotta be the outfits, right?"
+            #endif
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* POLYRHYTHM */ {
         /* Entry Scene   */ &scene_polyrhythm,
@@ -75,10 +81,11 @@ struct LevelData level_data_table[] = {
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_polyrhythm_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "Producing these is harder than I thought...",
-            /* OK        */ "Still getting the hang of making these.",
-            /* SUPERB    */ "We've produced more than we can stock!"
+            /* TRY_AGAIN */ "Producing these red rods is harder than I thought...",
+            /* OK        */ "Still getting the hang of making these red rods.",
+            /* SUPERB    */ "We've produced more red rods than we can stock!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* POLYRHYTHM_2 */ {
         /* Entry Scene   */ &scene_polyrhythm_2,
@@ -91,10 +98,11 @@ struct LevelData level_data_table[] = {
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_polyrhythm_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "We need to produce a whole lot more of them...",
-            /* OK        */ "Producing more of these wouldn't hurt!",
+            /* TRY_AGAIN */ "We need to produce a whole lot more red rods...",
+            /* OK        */ "Producing more red rods wouldn't hurt!",
             /* SUPERB    */ "Red rod production is at an all time high!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* NIGHT_WALK */ {
         /* Entry Scene   */ &scene_night_walk,
@@ -111,6 +119,7 @@ struct LevelData level_data_table[] = {
             /* OK        */ "Nothing like a stroll at night.",
             /* SUPERB    */ "You followed us up here!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* NIGHT_WALK_2 */ {
         /* Entry Scene   */ &scene_night_walk_2,
@@ -127,6 +136,7 @@ struct LevelData level_data_table[] = {
             /* OK        */ "The night breeze feels so cool...",
             /* SUPERB    */ "You made friends with the stars!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* RHYTHM_TWEEZERS */ {
         /* Entry Scene   */ &scene_rhythm_tweezers,
@@ -154,18 +164,23 @@ struct LevelData level_data_table[] = {
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_rhythm_tweezers_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "They're growing back already!?",
+            /* TRY_AGAIN */ "Why do you have to be so hairy!?",
             /* OK        */ "Why do only my vegetables grow hair, anyway...?",
             /* SUPERB    */ "How refreshing! The air is cool and crisp!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* SICK_BEATS */ {
         /* Entry Scene   */ &scene_sick_beats,
         /* Level Name    */ "Sick Beats",
         /* Level Desc.   */ "\0023" "Assistant's memo:\n"
-                            "We've got an outbreak\n"
+                            "We have an outbreak\n"
                             "of an unknown virus!\n"
+                            #ifdef PARADISE
+                            "Help us, Dr Cutlery!",
+                            #else
                             "Help us, Dr. Cutlery!",
+                            #endif
         /* Level Icon    */ 13,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_sick_beats_gfx_tables,
@@ -174,6 +189,7 @@ struct LevelData level_data_table[] = {
             /* OK        */ "Failure is just the first step to success!",
             /* SUPERB    */ "We've created breakthrough medicine!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* BOUNCY_ROAD */ {
         /* Entry Scene   */ &scene_bouncy_road,
@@ -206,6 +222,7 @@ struct LevelData level_data_table[] = {
             /* OK        */ "We're working our hardest!",
             /* SUPERB    */ "Easy come, easy go."
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* NINJA_BODYGUARD */ {
         /* Entry Scene   */ &scene_ninja_bodyguard,
@@ -222,6 +239,7 @@ struct LevelData level_data_table[] = {
             /* OK        */ "I cannot apologize enough, my lord!",
             /* SUPERB    */ "Not a scratch! He said I'm admirable!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* NINJA_REINCARNATE */ {
         /* Entry Scene   */ &scene_ninja_reincarnate,
@@ -238,28 +256,29 @@ struct LevelData level_data_table[] = {
             /* OK        */ "You are... strong. Don't give up yet.",
             /* SUPERB    */ "You have proven your worth! You have our blessing..."
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* SNEAKY_SPIRITS */ {
         /* Entry Scene   */ &scene_sneaky_spirits,
         /* Level Name    */ "Sneaky Spirits",
-        /* Level Desc.   */ "Ghosts are trying to\n"
-                            "escape their haunted\n"
-                            "house! Don't let them\n"
-                            "get past you!",
+        /* Level Desc.   */ "These spirits aren't\n"
+                            "exactly evil, but they\n"
+                            "ARE mean: they'll laugh\n"
+                            "at you if you miss.",
         /* Level Icon    */ 1,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_sneaky_spirits_gfx_tables,
         /* Epilogue Text */ {
             /* TRY_AGAIN */ "Escaped ghosts are nothing but trouble.",
-            /* OK        */ "You got one!",
+            /* OK        */ "This one's not going anywhere!",
             /* SUPERB    */ "No ghost escapes on your watch!"
         }
     },
     /* SNEAKY_SPIRITS_2 */ {
         /* Entry Scene   */ &scene_sneaky_spirits_2,
         /* Level Name    */ "Sneaky Spirits 2",
-        /* Level Desc.   */ "Ghosts are trying\n"
-                            "to escape again!\n"
+        /* Level Desc.   */ "Those spirits are\n"
+                            "acting up again!\n"
                             "Let them have it,\n"
                             "archery style!",
         /* Level Icon    */ 53,
@@ -270,6 +289,7 @@ struct LevelData level_data_table[] = {
             /* OK        */ "L-let me go! Please!",
             /* SUPERB    */ "You ghosts stay and think about what you've done!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* SAMURAI_SLICE */ {
         /* Entry Scene   */ &scene_samurai_slice,
@@ -286,6 +306,7 @@ struct LevelData level_data_table[] = {
             /* OK        */ "I shall push myself harder!",
             /* SUPERB    */ "Have you ever seen a sword this sharp?"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* SPACEBALL */ {
         /* Entry Scene   */ &scene_spaceball,
@@ -302,6 +323,7 @@ struct LevelData level_data_table[] = {
             /* OK        */ "Must... train... harder...",
             /* SUPERB    */ "I won first \"space\"!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* SPACEBALL_2 */ {
         /* Entry Scene   */ &scene_spaceball_2,
@@ -318,21 +340,26 @@ struct LevelData level_data_table[] = {
             /* OK        */ "I can't give up now!",
             /* SUPERB    */ "Guys, guys, look at what I've won!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* TAP_TRIAL */ {
         /* Entry Scene   */ &scene_tap_trial,
         /* Level Name    */ "Tap Trial",
-        /* Level Desc.   */ "Think you've got\n"
-                            "what it takes to\n"
-                            "tap-dance with\n"
-                            "the monkeys?",
+        /* Level Desc.   */ "You are the girl.\n"
+                            "They are the monkeys.\n"
+                            "Follow them to tap\n"
+                            "stardom!",
         /* Level Icon    */ 6,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_tap_trial_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "Disappointing...",
-            /* OK        */ "Pretty good...for a human.",
-            /* SUPERB    */ "It feels good to belong!"
+            #ifdef PARADISE
+            /* TRY_AGAIN */ "Better tap out.",
+            #else
+            /* TRY_AGAIN */ "Gotta tap out.",
+            #endif
+            /* OK        */ "You were ALMOST as good as a monkey...",
+            /* SUPERB    */ "Tap loves you too, Giraffe!"
         }
     },
     /* TAP_TRIAL_2 */ {
@@ -350,13 +377,14 @@ struct LevelData level_data_table[] = {
             /* OK        */ "Hey... Where'd our rhythm go?",
             /* SUPERB    */ "Monkeys are the key to tappiness!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* MARCHING_ORDERS */ {
         /* Entry Scene   */ &scene_marching_orders,
         /* Level Name    */ "Marching Orders",
         /* Level Desc.   */ "Ready, march! Following\n"
-                            "unit orders builds a\n"
-                            "sense of camaraderie.\n"
+                            "orders as a unit builds\n"
+                            "your camaraderie.\n"
 							"Also, rhythm.",
         /* Level Icon    */ 21,
         /* Level Type    */ LEVEL_TYPE_GAME,
@@ -382,6 +410,7 @@ struct LevelData level_data_table[] = {
             /* OK        */ "I know we can perform better than that!",
             /* SUPERB    */ "Now THIS is a reward!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* WIZARDS_WALTZ */ {
         /* Entry Scene   */ &scene_wizards_waltz,
@@ -414,6 +443,7 @@ struct LevelData level_data_table[] = {
             /* OK        */ "Didn't quite stick the landing...",
             /* SUPERB    */ "A perfect landing! Who needs rockets?!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* FIREWORKS */ {
         /* Entry Scene   */ &scene_fireworks,
@@ -421,7 +451,11 @@ struct LevelData level_data_table[] = {
         /* Level Desc.   */ "It's not summertime\n"
                             "without fireworks!\n"
                             "Light them up to fill the\n"
+                            #ifdef PARADISE
+                            "sky with pretty colours!",
+                            #else
                             "sky with pretty colors!",
+                            #endif
         /* Level Icon    */ 26,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_fireworks_gfx_tables,
@@ -436,54 +470,71 @@ struct LevelData level_data_table[] = {
         /* Level Name    */ "Power Calligraphy",
         /* Level Desc.   */ "Japanese calligraphy\n"
                             "requires grace, finesse,\n"
-                            "and a surprising amount\n"
+                            "and a shocking amount\n"
                             "of upper body strength.",
         /* Level Icon    */ 28,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_power_power_calligraphy_gfx_tables,
         /* Epilogue Text */ {
             /* TRY_AGAIN */ "Maybe I should stick with pencils...",
-            /* OK        */ "Who says calligraphy isn't fun?",
-            /* SUPERB    */ "Hooray for Japanese calligraphy!"
+            /* OK        */ "Precision! Grace! What's not to like?",
+            /* SUPERB    */ "Woo! Calligraphy party!"
         }
     },
     /* POWER_CALLIGRAPHY_2 */ { // this still kills me lmao
         /* Entry Scene   */ &scene_power_calligraphy,
         /* Level Name    */ "Power Calligraphy 2",
-        /* Level Desc.   */ "Japanese calligraphy\n"
-                            "requires grace, finesse,\n"
-                            "and a surprising amount\n"
-                            "of upper body strength.",
+        /* Level Desc.   */ "haha unused\n"
+                            "\n"
+                            "\n"
+                            "",
         /* Level Icon    */ 28,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_power_calligraphy_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "Maybe I should stick with pencils...",
-            /* OK        */ "Who says calligraphy isn't fun?",
-            /* SUPERB    */ "Hooray for Japanese calligraphy!"
+            /* TRY_AGAIN */ "",
+            /* OK        */ "",
+            /* SUPERB    */ ""
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* TOSS_BOYS */ {
         /* Entry Scene   */ &scene_toss_boys,
         /* Level Name    */ "Toss Team",
         /* Level Desc.   */ "This trio of friends love\n"
+                            #ifdef PARADISE
+                            "practising volleyball.\n"
+                            #else
                             "practicing volleyball.\n"
+                            #endif
                             "Listen for their names\n"
                             "as they pass their ball!",
         /* Level Icon    */ 30,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_toss_boys_gfx_tables,
         /* Epilogue Text */ {
+            #ifdef PARADISE
+            /* TRY_AGAIN */ "We've been thrown out!",
+            #else
             /* TRY_AGAIN */ "We've been tossed out!",
+            #endif
             /* OK        */ "Next time, we'll toss better than the best!",
+            #ifdef PARADISE
+            /* SUPERB    */ "Chuck World Championship, here we come!"
+            #else
             /* SUPERB    */ "Toss World Championship, here we come!"
+            #endif
         }
     },
     /* TOSS_BOYS_2 */ {
         /* Entry Scene   */ &scene_toss_boys_2,
         /* Level Name    */ "Toss Team 2",
         /* Level Desc.   */ "This trio of friends love\n"
+                            #ifdef PARADISE
+                            "practising volleyball.\n"
+                            #else
                             "practicing volleyball.\n"
+                            #endif
                             "Today, they're training\n"
                             "harder than ever!",
         /* Level Icon    */ 29,
@@ -492,8 +543,13 @@ struct LevelData level_data_table[] = {
         /* Epilogue Text */ {
             /* TRY_AGAIN */ "Our spirits have been deflated...",
             /* OK        */ "We still have a long way to go!",
+            #ifdef PARADISE
+            /* SUPERB    */ "Three cheers for our star thrower!"
+            #else
             /* SUPERB    */ "Three cheers for our star tosser!"
+            #endif
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* RAT_RACE */ {
         /* Entry Scene   */ &scene_rat_race,
@@ -574,6 +630,7 @@ struct LevelData level_data_table[] = {
             /* OK        */ "Is that the best you guys can do?",
             /* SUPERB    */ "All aboard... for SPACE!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* RAP_MEN */ {
         /* Entry Scene   */ &scene_rap_men,
@@ -606,6 +663,7 @@ struct LevelData level_data_table[] = {
             /* OK        */ "I know we can rap better than this!",
             /* SUPERB    */ "Yes, yes, YES! We've got it!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* QUIZ_SHOW */ {
         /* Entry Scene   */ &scene_quiz_show,
@@ -619,7 +677,11 @@ struct LevelData level_data_table[] = {
         /* Epilogue GFX  */ epilogue_quiz_show_gfx_tables,
         /* Epilogue Text */ {
             /* TRY_AGAIN */ "I can do better... I can do better...",
+            #ifdef PARADISE
+            /* OK        */ "Must study... for next time... Zzz...",
+            #else
             /* OK        */ "Gotta study... for next time... Zzz...",
+            #endif
             /* SUPERB    */ "I won the grand prize! A world tour!"
         }
     },
@@ -654,14 +716,15 @@ struct LevelData level_data_table[] = {
             /* OK        */ "When did it start raining?",
             /* SUPERB    */ "Our new Bon Dance is a lot of fun!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* REMIX_1 */ {
         /* Entry Scene   */ &scene_remix_1,
         /* Level Name    */ "Remix 1",
         /* Level Desc.   */ "Let's test your skills!\n"
-                            "Your experience from\n"
-                            "this batch of games\n"
-                            "will speak for itself.",
+                            "Stage 1's games have\n"
+                            "all been remixed!\n"
+                            "Think you can beat it?",
         /* Level Icon    */ 22,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix1_gfx_tables,
@@ -670,14 +733,15 @@ struct LevelData level_data_table[] = {
             /* OK        */ "You were as good as... an ordinary breakfast.",
             /* SUPERB    */ "You were as good as... why, a delicious dinner!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* REMIX_2 */ {
         /* Entry Scene   */ &scene_remix_2,
         /* Level Name    */ "Remix 2",
         /* Level Desc.   */ "Let's test your skills!\n"
-                            "Your experience from\n"
-                            "this batch of games\n"
-                            "will speak for itself.",
+                            "This one's got a lively\n"
+                            "atmosphere perfect\n"
+                            "for dance lessons!",
         /* Level Icon    */ 27,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix2_gfx_tables,
@@ -686,14 +750,15 @@ struct LevelData level_data_table[] = {
             /* OK        */ "That was as lively as... a pleasant game of catch.",
             /* SUPERB    */ "That was as lively as... a huge baseball tournament!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* REMIX_3 */ {
         /* Entry Scene   */ &scene_remix_3,
         /* Level Name    */ "Remix 3",
         /* Level Desc.   */ "Let's test your skills!\n"
-                            "Your experience from\n"
-                            "this batch of games\n"
-                            "will speak for itself.",
+                            "This one's got an\n"
+                            "adorable love song with\n"
+                            "adorable love lyrics!",
         /* Level Icon    */ 33,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix3_gfx_tables,
@@ -702,14 +767,15 @@ struct LevelData level_data_table[] = {
             /* OK        */ "Their love ended in... a good friendship.",
             /* SUPERB    */ "Their love ended in... a tender marriage!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* REMIX_4 */ {
         /* Entry Scene   */ &scene_remix_4,
         /* Level Name    */ "Remix 4",
         /* Level Desc.   */ "Let's test your skills!\n"
-                            "Your experience from\n"
-                            "this batch of games\n"
-                            "will speak for itself.",
+                            "This one's got a casual,\n"
+                            "easygoing vibe, like a\n"
+                            "nice, pleasant stroll...",
         /* Level Icon    */ 34,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix4_gfx_tables,
@@ -718,14 +784,15 @@ struct LevelData level_data_table[] = {
             /* OK        */ "Today's forecast... very cloudy.",
             /* SUPERB    */ "Today's forecast... clear skies all day!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* REMIX_5 */ {
         /* Entry Scene   */ &scene_remix_5,
         /* Level Name    */ "Remix 5",
         /* Level Desc.   */ "Let's test your skills!\n"
-                            "Your experience from\n"
-                            "this batch of games\n"
-                            "will speak for itself.",
+                            "This one's got some\n"
+                            "melancholic lyrics.\n"
+                            "Try to keep your cool!",
         /* Level Icon    */ 39,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix5_gfx_tables,
@@ -734,14 +801,15 @@ struct LevelData level_data_table[] = {
             /* OK        */ "This couple is... a little nervous...",
             /* SUPERB    */ "This couple is... living their happy-ever-after!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* REMIX_6 */ {
         /* Entry Scene   */ &scene_remix_6,
         /* Level Name    */ "Remix 6",
         /* Level Desc.   */ "Let's test your skills!\n"
-                            "Your experience from\n"
-                            "what you've learned\n"
-                            "will speak for itself.",
+                            "Every game you've\n"
+                            "played is here! Show\n"
+                            "us what you've learned!",
         /* Level Icon    */ 2,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix6_gfx_tables,
@@ -750,14 +818,15 @@ struct LevelData level_data_table[] = {
             /* OK        */ "Your fish tank is... unique for sure!",
             /* SUPERB    */ "Your fish tank is... unbelievable!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* REMIX_7 */ {
         /* Entry Scene   */ &scene_remix_7,
         /* Level Name    */ "Remix 7",
         /* Level Desc.   */ "Let's test your skills!\n"
-                            "Your experience from\n"
-                            "a bunch of games\n"
-                            "will speak for itself.",
+                            "A lot of the remixes\n"
+                            "make a comeback here!\n"
+                            "It's a remix remix!",
         /* Level Icon    */ 19,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix7_gfx_tables,
@@ -766,14 +835,15 @@ struct LevelData level_data_table[] = {
             /* OK        */ "Your Jurassic visit was... rather tame.",
             /* SUPERB    */ "Your Jurassic visit was... too much fun!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* REMIX_8 */ {
         /* Entry Scene   */ &scene_remix_8,
         /* Level Name    */ "Remix 8",
         /* Level Desc.   */ "Let's test your skills!\n"
-                            "Your experience from\n"
-                            "a bunch of games\n"
-                            "will speak one last time.",
+                            "This special remix is a\n"
+                            "real challenge! Show\n"
+                            "us what you've learned!",
         /* Level Icon    */ 37,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix8_gfx_tables,
@@ -782,10 +852,15 @@ struct LevelData level_data_table[] = {
             /* OK        */ "Your road trip was... a little long.",
             /* SUPERB    */ "Your road trip was... absolutely spectacular!"
         },
+        /* Level Flags   */ LEVEL_DATA_FLAG_NO_PRACTICE
     },
     /* CAFE */ {
         /* Entry Scene   */ &scene_cafe,
+        #ifdef PARADISE
+        /* Level Name    */ "Caf‡Q Counselling",
+        #else
         /* Level Name    */ "Caf‡Q Counseling",
+        #endif
         /* Level Desc.   */ "How are you feeling?\n"
                             "If something's on your\n"
                             "mind, feel free to\n"
@@ -878,5 +953,106 @@ struct LevelData level_data_table[] = {
             /* OK        */ "The owner says... \"You've got great skills, you know!\"",
             /* SUPERB    */ "The producer says... \"You should play at our place, too!\""
         }
+    },
+    /* KARATE_MAN */ {
+        /* Entry Scene   */ &scene_karate_man_extra,
+        /* Level Name    */ "Karate Man",
+        /* Level Desc.   */ "We've increased the\n"
+                            "speed! Do your best,\n"
+                            "as we throw some more\n"
+                            "stuff for you to punch.",
+        /* Level Icon    */ 54,
+        /* Level Type    */ LEVEL_TYPE_GAME,
+        /* Epilogue GFX  */ epilogue_karate_man_extra_gfx_tables,
+        /* Epilogue Text */ {
+            /* TRY_AGAIN */ "The tournament didn't go so well...",
+            /* OK        */ "I may not have won, but I did really well!",
+            /* SUPERB    */ "I won the tournament and took home the gold!"
+        },
+        /* Level Flags   */ LEVEL_DATA_FLAG_IS_EXTRA | LEVEL_DATA_FLAG_NO_PRACTICE
+    },
+    /* RHYTHM_TWEEZERS */ {
+        /* Entry Scene   */ &scene_rhythm_tweezers_extra,
+        /* Level Name    */ "Rhythm Tweezers",
+        /* Level Desc.   */ "My roots are showing!\n"
+                            "Don't let the speed trip\n"
+                            "you up! Pluck them off!\n",
+        /* Level Icon    */ 55,
+        /* Level Type    */ LEVEL_TYPE_GAME,
+        /* Epilogue GFX  */ epilogue_rhythm_tweezers_extra_gfx_tables,
+        /* Epilogue Text */ {
+            /* TRY_AGAIN */ "I can't pluck anything at this speed!",
+            /* OK        */ "These hairs are pretty tough to pluck.",
+            /* SUPERB    */ "Look at those flowers! They're so relaxing..."
+        },
+        /* Level Flags   */ LEVEL_DATA_FLAG_IS_EXTRA | LEVEL_DATA_FLAG_NO_PRACTICE
+    },
+    /* MARCHING_ORDERS */ {
+        /* Entry Scene   */ &scene_marching_orders_extra,
+        /* Level Name    */ "Marching Orders",
+        /* Level Desc.   */ "Ready, march!\n"
+                            "This mission will require\n"
+                            "quick marching, so stay\n"
+							"focused!",
+        /* Level Icon    */ 56,
+        /* Level Type    */ LEVEL_TYPE_GAME,
+        /* Epilogue GFX  */ epilogue_marching_orders_extra_gfx_tables,
+        /* Epilogue Text */ {
+            /* TRY_AGAIN */ "MONSTER! Retreat! Retreat!",
+            /* OK        */ "Ah, there's the lost puppy!",
+            /* SUPERB    */ "We rescued the lost puppy! Hooray!"
+        },
+        /* Level Flags   */ LEVEL_DATA_FLAG_IS_EXTRA | LEVEL_DATA_FLAG_NO_PRACTICE
+    },
+    /* SPACEBALL */ {
+        /* Entry Scene   */ &scene_spaceball_extra,
+        /* Level Name    */ "Spaceball",
+        /* Level Desc.   */ "Ignore the camera's\n"
+                            "zooms! Make the ball\n"
+                            "zoom away! Don't fall\n"
+                            "behind! Let it fly!",
+        /* Level Icon    */ 57,
+        /* Level Type    */ LEVEL_TYPE_GAME,
+        /* Epilogue GFX  */ epilogue_spaceball_extra_gfx_tables,
+        /* Epilogue Text */ {
+            /* TRY_AGAIN */ "Ahhh! Nooooooo!",
+            /* OK        */ "Graaaah!",
+            /* SUPERB    */ "A home run! I did it!"
+        },
+        /* Level Flags   */ LEVEL_DATA_FLAG_IS_EXTRA | LEVEL_DATA_FLAG_NO_PRACTICE
+    },
+    /* CLAPPY_TRIO */ {
+        /* Entry Scene   */ &scene_clappy_trio_extra,
+        /* Level Name    */ "The Clappy Trio",
+        /* Level Desc.   */ "Clap your hands in\n"
+                            "order! You're the third\n"
+                            "clapper. Watch out\n"
+							"for your fast friends!",
+        /* Level Icon    */ 58,
+        /* Level Type    */ LEVEL_TYPE_GAME,
+        /* Epilogue GFX  */ epilogue_clappy_trio_extra_gfx_tables,
+        /* Epilogue Text */ {
+            /* TRY_AGAIN */ "Wait! Don't leave without us!",
+            /* OK        */ "This is one nice space cruise!",
+            /* SUPERB    */ "I've discovered a new planet! Stellar!"
+        },
+        /* Level Flags   */ LEVEL_DATA_FLAG_IS_EXTRA | LEVEL_DATA_FLAG_NO_PRACTICE
+    },
+    /* REMIX_1 */ {
+        /* Entry Scene   */ &scene_remix_1_extra,
+        /* Level Name    */ "Extra Remix",
+        /* Level Desc.   */ "Let's test your skills!\n"
+                            "This remix is faster\n"
+                            "than ever!\n"
+                            "Think you can beat it?",
+        /* Level Icon    */ 59,
+        /* Level Type    */ LEVEL_TYPE_REMIX,
+        /* Epilogue GFX  */ epilogue_remix1_extra_gfx_tables,
+        /* Epilogue Text */ {
+            /* TRY_AGAIN */ "This is going to take a while...",
+            /* OK        */ "Just a normal chick. Cheep-Cheep!",
+            /* SUPERB    */ "You've grown splendidly! You look downright dignified!"
+        },
+        /* Level Flags   */ LEVEL_DATA_FLAG_IS_EXTRA | LEVEL_DATA_FLAG_NO_PRACTICE
     }
 };
