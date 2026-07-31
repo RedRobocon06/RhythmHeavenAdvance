@@ -565,7 +565,7 @@ void save_level_state_from_grid_xy(s32 x, s32 y, s32 state) {
         id = game_select_grid_data[x + (y * GS_GRID_WIDTH)].id;
 
         if (id >= 0) {
-            set_level_state(saveData, id, state);
+            saveData->levelStates[id] = state;
         }
     }
 }
