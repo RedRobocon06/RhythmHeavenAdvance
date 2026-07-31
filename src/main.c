@@ -119,7 +119,6 @@ void agb_main(void) {
 
 	while (TRUE) {
 		func_080013a8();
-		update_save_buffer_sram_writes();
 		get_agb_random_var();
 		update_key_listener();
 		D_030046a0 += 1;
@@ -131,6 +130,7 @@ void agb_main(void) {
 			if ((keysPressed & RESET_BUTTON_COMBO) == RESET_BUTTON_COMBO) {
 				key_rec_set_mode(0, 0x3ff, 0, 0);
 				set_current_scene(&scene_soft_reset);
+				func_08009548();
 				D_03004498 = FALSE;
 			}
 		}
