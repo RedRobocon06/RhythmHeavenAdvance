@@ -5,11 +5,7 @@
 /* Game Text - Space Dance */
 
 
-#ifdef PARADISE
-const char D_0805e2ac[] = "Your disorganisation was visual.";
-#else
 const char D_0805e2ac[] = "Your disorganization was visual.";
-#endif
 
 const char D_0805e2c8[] = "You were synched!";
 
@@ -34,10 +30,6 @@ const char D_0805e3d8[] = "Ｍｏｔｉｏｎ　ｔｈｅ　ｆｉｒｓｔ！";
 const char D_0805e3ec[] = "Ｏｂｓｅｒｖｅ　ａｎｄ　ｄｕｐｌｉｃａｔｅ！";
 
 const char D_0805e3fc[] = "Ｓａｔｉｓｆａｃｔｏｒｙ　ｉｓ　ｂｅｉｎｇ！";
-
-const char D_0805e3fd[] = "Ｙｏｕ　ｈａｖｅ　ｓｑｕａｔｔｅｄ　ａｃｃｅｐｔａｂｌｙ！";
-
-const char D_0805e3fe[] = "Ｐｕｎｃｈｉｎｇ　ｔｏ　ｒｅｑｕｉｒｅｄ　ｐｒｏｆｉｃｉｅｎｃｙ！";
 
 const char D_0805e404[] = "Ｎｏｗ　ｉｓ　ｔｉｍｅ　ｆｏｒ　ｔｈｅ　ｎｅｘｔ　ｔｅａｃｈｉｎｇ．";
 
