@@ -244,19 +244,9 @@ static void reset_extra_save_data_defaults(struct TengokuSaveData *data) {
         extra->extraLevelFirstSuperb[i] = 0;
     }
 
-    for (i = 0; i < TOTAL_EXTRA_PERFECT_CAMPAIGNS; i++) {
-        extra->extraCampaignsCleared[i] = FALSE;
-    }
-
-    for (i = 0; i < TOTAL_EXTRA_READING_MATERIALS; i++) {
-        extra->extraReadingMaterialUnlocked[i] = FALSE;
-    }
-
     for (i = 0; i < TOTAL_LEVELS; i++) {
         extra->gameFlags[i] = 0;
     }
-
-    set_reading_material_unlocked(data, READING_MATERIAL_CREDITS, TRUE);
 
     update_extra_save_data_checksum(extra);
 }
