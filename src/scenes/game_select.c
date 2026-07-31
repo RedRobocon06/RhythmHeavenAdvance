@@ -590,10 +590,6 @@ static void game_select_repair_unlock_progress(void) {
                     continue;
                 }
 
-                if (level_data_table[id].flags & LEVEL_DATA_FLAG_IS_EXTRA) {
-                    continue;
-                }
-
                 state = get_level_state(saveData, id);
                 if (state == LEVEL_STATE_APPEARING) {
                     state = LEVEL_STATE_HIDDEN;
