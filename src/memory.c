@@ -120,6 +120,8 @@ s32 copy_to_save_buffer(u8 *cartRAM) {
     if ((generate_save_buffer_checksum((s32 *)D_030046a8, SAVE_BUFFER_SIZE) - buffer->header.checksum) != buffer->header.checksum) {
         return 2;
     }
+    
+    SET_ADVANCE_FLAG(buffer->data.advanceFlags, ADVANCE_FLAG_SAVE_CONVERTED);
 
     return 0;
 }
