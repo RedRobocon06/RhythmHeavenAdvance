@@ -10,16 +10,6 @@ static s32 unused_03000094; // unknown
 #define SRAM_SAVE_CHUNK_BYTES 0x100
 #define VBLANK_START_LINE 160
 
-static struct SramSaveWriteState {
-    u8 active;
-    u8 _pad[3];
-    u8 *cartRAM;
-    u32 dataOffset;
-    u32 dataSize;
-    u32 bytesWritten;
-    u32 expectedChecksum;
-} sSramSaveWriteState;
-
 extern u8 *save_memory_base; // CartRAMBase (0x0E000000)
 extern u8 *backup_save_memory_base; // CartRAMBase + 0x4000 (0x0E004000)
 extern char D_08935fbc[]; // "RIQ"
