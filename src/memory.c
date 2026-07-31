@@ -108,6 +108,37 @@ void clear_save_data(void) {
 }
 
 
+void set_playtest_save_data(void) {
+    struct TengokuSaveData *data = &D_030046a8->data;
+    u32 i;
+    
+    // unlock all levels
+    for (i = 0; i < TOTAL_LEVELS; i++) {
+        set_level_state(data, i, (i >= TOTAL_LEVELS-6) ? LEVEL_STATE_CLEARED : LEVEL_STATE_HAS_MEDAL);
+        set_level_score(data, i, DEFAULT_LEVEL_SCORE);
+    }
+
+    data->campaignState = CAMPAIGN_STATE_INACTIVE;
+
+    // set medals to 99
+    data->totalMedals = 99;
+
+    // unlock all reading materials
+    for (i = 0; i < TOTAL_READING_MATERIALS; i++) {
+        set_reading_material_unlocked(data, i, TRUE);
+    }
+    // unlock all drum kits
+    for (i = 0; i < ARRAY_COUNT(data->drumKitsUnlocked); i++) {
+        data->drumKitsUnlocked[i] = TRUE;
+    }
+    // unlock all songs
+    unlock_all_unassigned_campaign_gift_songs();
+
+    data->currentFlow = 0;
+    data->unkB0 = TRUE;
+}
+
+
 s32 copy_to_save_buffer(u8 *cartRAM) {
     struct SaveBuffer *buffer = D_030046a8;
 
@@ -199,4 +230,67 @@ s32 func_080009d0(s16 *arg1) {
 
 s32 func_080009fc(void) {
 	return 0;
+}
+
+u8 get_reading_material_unlocked(struct TengokuSaveData *data, u32 materialID) {
+    if (materialID >= TOTAL_BASE_READING_MATERIALS) {
+        return data->extraData.extraReadingMaterialUnlocked[materialID - TOTAL_BASE_READING_MATERIALS];
+    }
+    return data->readingMaterialUnlocked[materialID];
+}
+
+void set_level_state(struct TengokuSaveData *data, u32 levelID, u8 state) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        data->extraData.extraLevelStates[levelID - TOTAL_BASE_LEVELS] = state;
+    } else {
+        data->levelStates[levelID] = state;
+    }
+}
+
+void set_level_score(struct TengokuSaveData *data, u32 levelID, u16 score) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        data->extraData.extraLevelScores[levelID - TOTAL_BASE_LEVELS] = score;
+    } else {
+        data->levelScores[levelID] = score;
+    }
+}
+
+void set_level_total_plays(struct TengokuSaveData *data, u32 levelID, u8 totalPlays) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        data->extraData.extraLevelTotalPlays[levelID - TOTAL_BASE_LEVELS] = totalPlays;
+    } else {
+        data->levelTotalPlays[levelID] = totalPlays;
+    }
+}
+
+void set_level_first_ok(struct TengokuSaveData *data, u32 levelID, u8 firstOK) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        data->extraData.extraLevelFirstOK[levelID - TOTAL_BASE_LEVELS] = firstOK;
+    } else {
+        data->levelFirstOK[levelID] = firstOK;
+    }
+}
+
+void set_level_first_superb(struct TengokuSaveData *data, u32 levelID, u8 firstSuperb) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        data->extraData.extraLevelFirstSuperb[levelID - TOTAL_BASE_LEVELS] = firstSuperb;
+    } else {
+        data->levelFirstSuperb[levelID] = firstSuperb;
+    }
+}
+
+void set_campaign_cleared(struct TengokuSaveData *data, u32 campaignID, u8 cleared) {
+    if (campaignID >= TOTAL_BASE_PERFECT_CAMPAIGNS){
+        data->extraData.extraCampaignsCleared[campaignID - TOTAL_BASE_PERFECT_CAMPAIGNS] = cleared;
+    } else {
+        data->campaignsCleared[campaignID] = cleared;
+    }
+}
+
+void set_reading_material_unlocked(struct TengokuSaveData *data, u32 materialID, u8 unlocked) {
+    if (materialID >= TOTAL_BASE_READING_MATERIALS) {
+        data->extraData.extraReadingMaterialUnlocked[materialID - TOTAL_BASE_READING_MATERIALS] = unlocked;
+    } else {
+        data->readingMaterialUnlocked[materialID] = unlocked;
+    }
 }
