@@ -1054,7 +1054,7 @@ void func_0800c694(u32 arg) {
         arg = 24;
     }
 
-    rumble_request_pulse(arg);
+    func_08009564(arg);
 }
 
 
