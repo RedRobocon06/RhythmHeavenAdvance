@@ -264,7 +264,6 @@ script script_night_walk_2_main
     night_walk_set_platform 0
     spawn_cue CUE_SNARE
     rest 24
-    print_text_s D_0805b335
     spawn_cue CUE_KICK
     rest 24
     spawn_cue CUE_KICK
