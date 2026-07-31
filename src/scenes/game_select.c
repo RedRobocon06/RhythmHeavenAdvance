@@ -570,6 +570,65 @@ void save_level_state_from_grid_xy(s32 x, s32 y, s32 state) {
     }
 }
 
+static void game_select_repair_unlock_progress(void) {
+    struct TengokuSaveData *saveData = &D_030046a8->data;
+    u32 pass;
+
+    for (pass = 0; pass < (GS_GRID_WIDTH * GS_GRID_HEIGHT); pass++) {
+        u32 x, y;
+        u32 changes = 0;
+
+        for (y = 0; y < GS_GRID_HEIGHT; y++) {
+            for (x = 0; x < GS_GRID_WIDTH; x++) {
+                struct GameSelectGridEntry *gridEntry;
+                s32 id, state, newState;
+
+                gridEntry = game_select_grid_data + x + (y * GS_GRID_WIDTH);
+                id = gridEntry->id;
+
+                if (id < 0) {
+                    continue;
+                }
+
+                if (level_data_table[id].flags & LEVEL_DATA_FLAG_IS_EXTRA) {
+                    continue;
+                }
+
+                state = get_level_state(saveData, id);
+                if (state == LEVEL_STATE_APPEARING) {
+                    state = LEVEL_STATE_HIDDEN;
+                    set_level_state(saveData, id, state);
+                    changes++;
+                }
+
+                if (state >= LEVEL_STATE_OPEN) {
+                    continue;
+                }
+
+                newState = LEVEL_STATE_NULL;
+                if (game_select_check_level_event_req(x, y, LEVEL_STATE_OPEN)) {
+                    if (gridEntry->flags & LEVEL_EVENT_CLEAR_BY_DEFAULT) {
+                        newState = LEVEL_STATE_CLEARED;
+                    } else {
+                        newState = LEVEL_STATE_OPEN;
+                    }
+                } else if (game_select_check_level_event_req(x, y, LEVEL_STATE_CLOSED)) {
+                    newState = LEVEL_STATE_CLOSED;
+                }
+
+                if (newState > state) {
+                    set_level_state(saveData, id, newState);
+                    changes++;
+                }
+            }
+        }
+
+        if (changes == 0) {
+            break;
+        }
+    }
+}
+
 
 // Init. Color Changers
 void game_select_init_color_mod(void) {
