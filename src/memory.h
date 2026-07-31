@@ -136,21 +136,3 @@ extern void func_080009c8_stub(void);
 extern void func_080009cc_stub(void);
 extern s32 func_080009d0(s16 *);
 extern s32 func_080009fc(void);
-
-extern u8 get_level_state(struct TengokuSaveData *data, u32 levelID);
-extern u16 get_level_score(struct TengokuSaveData *data, u32 levelID);
-extern u8 get_level_total_plays(struct TengokuSaveData *data, u32 levelID);
-extern u8 get_level_first_ok(struct TengokuSaveData *data, u32 levelID);
-extern u8 get_level_first_superb(struct TengokuSaveData *data, u32 levelID);
-extern u8 get_campaign_cleared(struct TengokuSaveData *data, u32 campaignID);
-extern u32 get_total_base_cleared_campaigns(struct TengokuSaveData *data);
-extern u32 get_total_active_cleared_campaigns(struct TengokuSaveData *data);
-extern u8 get_reading_material_unlocked(struct TengokuSaveData *data, u32 materialID);
-
-extern void set_level_state(struct TengokuSaveData *data, u32 levelID, u8 state);
-extern void set_level_score(struct TengokuSaveData *data, u32 levelID, u16 score);
-extern void set_level_total_plays(struct TengokuSaveData *data, u32 levelID, u8 totalPlays);
-extern void set_level_first_ok(struct TengokuSaveData *data, u32 levelID, u8 firstOK);
-extern void set_level_first_superb(struct TengokuSaveData *data, u32 levelID, u8 firstSuperb);
-extern void set_campaign_cleared(struct TengokuSaveData *data, u32 campaignID, u8 cleared);
-extern void set_reading_material_unlocked(struct TengokuSaveData *data, u32 materialID, u8 unlocked);
