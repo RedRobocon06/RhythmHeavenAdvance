@@ -206,3 +206,129 @@ s32 func_080009d0(s16 *arg1) {
 s32 func_080009fc(void) {
 	return 0;
 }
+
+u8 get_level_state(struct TengokuSaveData *data, u32 levelID) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        return data->extraData.extraLevelStates[levelID - TOTAL_BASE_LEVELS];
+    }
+    return data->levelStates[levelID];
+}
+
+u16 get_level_score(struct TengokuSaveData *data, u32 levelID) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        return data->extraData.extraLevelScores[levelID - TOTAL_BASE_LEVELS];
+    }
+    return data->levelScores[levelID];
+}
+
+u8 get_level_total_plays(struct TengokuSaveData *data, u32 levelID) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        return data->extraData.extraLevelTotalPlays[levelID - TOTAL_BASE_LEVELS];
+    }
+    return data->levelTotalPlays[levelID];
+}
+
+u8 get_level_first_ok(struct TengokuSaveData *data, u32 levelID) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        return data->extraData.extraLevelFirstOK[levelID - TOTAL_BASE_LEVELS];
+    }
+    return data->levelFirstOK[levelID];
+}
+
+u8 get_level_first_superb(struct TengokuSaveData *data, u32 levelID) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        return data->extraData.extraLevelFirstSuperb[levelID - TOTAL_BASE_LEVELS];
+    }
+    return data->levelFirstSuperb[levelID];
+}
+
+u8 get_campaign_cleared(struct TengokuSaveData *data, u32 campaignID) {
+    if (campaignID >= TOTAL_BASE_PERFECT_CAMPAIGNS){
+        return data->extraData.extraCampaignsCleared[campaignID - TOTAL_BASE_PERFECT_CAMPAIGNS];
+    }
+    return data->campaignsCleared[campaignID];
+}
+
+static u32 count_cleared_campaigns(struct TengokuSaveData *data, u32 totalCampaigns) {
+    u32 i;
+    u32 totalCleared = 0;
+
+    for (i = 0; i < totalCampaigns; i++) {
+        if (get_campaign_cleared(data, i)) {
+            totalCleared++;
+        }
+    }
+
+    return totalCleared;
+}
+
+u32 get_total_base_cleared_campaigns(struct TengokuSaveData *data) {
+    return count_cleared_campaigns(data, BASE_CAMPAIGN_MILESTONE_TOTAL);
+}
+
+u32 get_total_active_cleared_campaigns(struct TengokuSaveData *data) {
+    return count_cleared_campaigns(data, ACTIVE_AVAILABLE_CAMPAIGNS);
+}
+
+u8 get_reading_material_unlocked(struct TengokuSaveData *data, u32 materialID) {
+    if (materialID >= TOTAL_BASE_READING_MATERIALS) {
+        return data->extraData.extraReadingMaterialUnlocked[materialID - TOTAL_BASE_READING_MATERIALS];
+    }
+    return data->readingMaterialUnlocked[materialID];
+}
+
+void set_level_state(struct TengokuSaveData *data, u32 levelID, u8 state) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        data->extraData.extraLevelStates[levelID - TOTAL_BASE_LEVELS] = state;
+    } else {
+        data->levelStates[levelID] = state;
+    }
+}
+
+void set_level_score(struct TengokuSaveData *data, u32 levelID, u16 score) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        data->extraData.extraLevelScores[levelID - TOTAL_BASE_LEVELS] = score;
+    } else {
+        data->levelScores[levelID] = score;
+    }
+}
+
+void set_level_total_plays(struct TengokuSaveData *data, u32 levelID, u8 totalPlays) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        data->extraData.extraLevelTotalPlays[levelID - TOTAL_BASE_LEVELS] = totalPlays;
+    } else {
+        data->levelTotalPlays[levelID] = totalPlays;
+    }
+}
+
+void set_level_first_ok(struct TengokuSaveData *data, u32 levelID, u8 firstOK) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        data->extraData.extraLevelFirstOK[levelID - TOTAL_BASE_LEVELS] = firstOK;
+    } else {
+        data->levelFirstOK[levelID] = firstOK;
+    }
+}
+
+void set_level_first_superb(struct TengokuSaveData *data, u32 levelID, u8 firstSuperb) {
+    if (levelID >= TOTAL_BASE_LEVELS){
+        data->extraData.extraLevelFirstSuperb[levelID - TOTAL_BASE_LEVELS] = firstSuperb;
+    } else {
+        data->levelFirstSuperb[levelID] = firstSuperb;
+    }
+}
+
+void set_campaign_cleared(struct TengokuSaveData *data, u32 campaignID, u8 cleared) {
+    if (campaignID >= TOTAL_BASE_PERFECT_CAMPAIGNS){
+        data->extraData.extraCampaignsCleared[campaignID - TOTAL_BASE_PERFECT_CAMPAIGNS] = cleared;
+    } else {
+        data->campaignsCleared[campaignID] = cleared;
+    }
+}
+
+void set_reading_material_unlocked(struct TengokuSaveData *data, u32 materialID, u8 unlocked) {
+    if (materialID >= TOTAL_BASE_READING_MATERIALS) {
+        data->extraData.extraReadingMaterialUnlocked[materialID - TOTAL_BASE_READING_MATERIALS] = unlocked;
+    } else {
+        data->readingMaterialUnlocked[materialID] = unlocked;
+    }
+}
