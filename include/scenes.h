@@ -16,7 +16,6 @@ extern void *gCurrentSceneData;
 
 // Menus
 extern struct Scene scene_warning;
-extern struct Scene scene_disclaimer;
 extern struct Scene scene_title;
 extern struct Scene scene_main_menu;
 extern struct Scene scene_game_select;
@@ -38,12 +37,6 @@ extern struct Scene scene_debug_menu;
 extern struct Scene scene_data_check;
 extern struct Scene scene_data_clear;
 extern struct Scene scene_flash_mem_test;
-extern struct Scene scene_save_editor;
-extern struct Scene scene_sequence_player;
-extern struct Scene scene_asset_test;
-extern struct Scene scene_template;
-extern struct Scene scene_read_error;
-extern struct Scene scene_gbp_handshake;
 
 // Main Games
 extern struct Scene scene_karate_man;
@@ -95,14 +88,6 @@ extern struct Scene scene_remix_5;
 extern struct Scene scene_remix_6;
 extern struct Scene scene_remix_7;
 extern struct Scene scene_remix_8;
-
-// Extra Games
-extern struct Scene scene_karate_man_extra;
-extern struct Scene scene_rhythm_tweezers_extra;
-extern struct Scene scene_marching_orders_extra;
-extern struct Scene scene_spaceball_extra;
-extern struct Scene scene_clappy_trio_extra;
-extern struct Scene scene_remix_1_extra;
 
 // Medal Corner Games
 extern struct Scene scene_mr_upbeat;
