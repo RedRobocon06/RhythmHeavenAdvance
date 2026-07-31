@@ -14,10 +14,6 @@
 #include "src/midi/midi.h"
 #include "src/lib_0804ca80.h"
 #include "src/backdrop.h"
-#include "src/code_080092cc.h"
-#include "src/scenes/gameplay.h"
-#include "src/scenes/game_select.h"
-#include "src/memory.h"
 
 // Could use better split
 
@@ -1043,7 +1039,7 @@ void func_0800c694(u32 arg) {
         arg = 24;
     }
 
-    rumble_request_pulse(arg);
+    func_08009564(arg);
 }
 
 
