@@ -5,8 +5,6 @@
 #include "bitmap_font.h"
 #include "memory_heap.h"
 
-extern u8 haveSeenDisclaimer;
-
 
 static struct Scene *gCurrentScene;
 static struct Scene *gNextScene;
@@ -67,9 +65,6 @@ void func_08000224(void) {
 	set_playtest_save_data();
 #endif
 	flush_save_buffer_to_sram_backup();
-
-	// Initialize disclaimer flag from save data
-	haveSeenDisclaimer = CHECK_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_SEEN_DISCLAIMER);
 	
 	set_sound_mode(D_030046a8->data.unk294[8]); // Set DirectSound Mode (Stereo/Mono)
 	set_scene_object_current_text_id(scene_get_default_text_id());
@@ -113,16 +108,13 @@ void agb_main(void) {
 	set_sound_mode(D_030046a8->data.unk294[8]); // Set DirectSound Mode (Stereo/Mono)
 
 	REG_DISPSTAT = 8;
-	REG_IE = (INTERRUPT_CART | INTERRUPT_DMA2 | INTERRUPT_TIMER3 | INTERRUPT_VBLANK
-	);
+	REG_IE = (INTERRUPT_CART | INTERRUPT_DMA2 | INTERRUPT_TIMER3 | INTERRUPT_VBLANK);
 	REG_IF = 0xFFFF;
 	REG_IME = 1;
 
 	func_0801d860(FALSE); // Init. Script Operator (Init. Static Variables)
 	init_scenes(&scene_warning);
-	set_scene_trans_target(&scene_warning, (CHECK_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_SKIP_DISCLAIMER) ? INITIAL_SCENE : &scene_disclaimer));
-    set_scene_trans_target(&scene_disclaimer, INITIAL_SCENE);
-
+	set_scene_trans_target(&scene_warning, D_08935fac); // Title Screen
 	update_key_listener();
 
 	while (TRUE) {
