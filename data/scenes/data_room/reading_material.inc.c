@@ -1,7 +1,7 @@
 #include "reading_materials.h"
 
 // [D_089d7e74] Reading Material Table
-struct ReadingMaterial reading_material_table[TOTAL_READING_MATERIALS] = {
+struct ReadingMaterial reading_material_table[] = {
     /* WELCOME ("Rhythm Tengoku Welcome") */ {
         /* TITLE ---------------------------------------------------------- */
             "Welcome to Rhythm Heaven!",
