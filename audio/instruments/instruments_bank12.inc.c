@@ -29,7 +29,7 @@ struct InstrumentPCM instrument_pcm_0308 = {
 };
 
 extern struct SampleData sdance_and_data;
-struct InstrumentPCM instrument_pcm_0309 = {
+struct InstrumentPCM instrument_pcm_and = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -44,7 +44,7 @@ struct InstrumentPCM instrument_pcm_0309 = {
 };
 
 extern struct SampleData sdance_pose_data;
-struct InstrumentPCM instrument_pcm_0310 = {
+struct InstrumentPCM instrument_pcm_pose = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -59,7 +59,7 @@ struct InstrumentPCM instrument_pcm_0310 = {
 };
 
 extern struct SampleData sdance_let_data;
-struct InstrumentPCM instrument_pcm_0311 = {
+struct InstrumentPCM instrument_pcm_let = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -74,7 +74,7 @@ struct InstrumentPCM instrument_pcm_0311 = {
 };
 
 extern struct SampleData sdance_sit_data;
-struct InstrumentPCM instrument_pcm_0312 = {
+struct InstrumentPCM instrument_pcm_sit = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -89,7 +89,7 @@ struct InstrumentPCM instrument_pcm_0312 = {
 };
 
 extern struct SampleData sdance_down_data;
-struct InstrumentPCM instrument_pcm_0313 = {
+struct InstrumentPCM instrument_pcm_down = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -104,7 +104,7 @@ struct InstrumentPCM instrument_pcm_0313 = {
 };
 
 extern struct SampleData sdance_pap_data;
-struct InstrumentPCM instrument_pcm_0314 = {
+struct InstrumentPCM instrument_pcm_pap = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -119,7 +119,7 @@ struct InstrumentPCM instrument_pcm_0314 = {
 };
 
 extern struct SampleData sdance_punch_data;
-struct InstrumentPCM instrument_pcm_0315 = {
+struct InstrumentPCM instrument_pcm_punch = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -134,7 +134,7 @@ struct InstrumentPCM instrument_pcm_0315 = {
 };
 
 extern struct SampleData sdance_and_g_data;
-struct InstrumentPCM instrument_pcm_0316 = {
+struct InstrumentPCM instrument_pcm_and_g = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -149,7 +149,7 @@ struct InstrumentPCM instrument_pcm_0316 = {
 };
 
 extern struct SampleData sdance_pose_g_data;
-struct InstrumentPCM instrument_pcm_0317 = {
+struct InstrumentPCM instrument_pcm_pose_g = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -164,7 +164,7 @@ struct InstrumentPCM instrument_pcm_0317 = {
 };
 
 extern struct SampleData sdance_let_g_data;
-struct InstrumentPCM instrument_pcm_0318 = {
+struct InstrumentPCM instrument_pcm_let_g = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -179,7 +179,7 @@ struct InstrumentPCM instrument_pcm_0318 = {
 };
 
 extern struct SampleData sdance_sit_g_data;
-struct InstrumentPCM instrument_pcm_0319 = {
+struct InstrumentPCM instrument_pcm_sit_g = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -194,7 +194,7 @@ struct InstrumentPCM instrument_pcm_0319 = {
 };
 
 extern struct SampleData sdance_down_g_data;
-struct InstrumentPCM instrument_pcm_0320 = {
+struct InstrumentPCM instrument_pcm_down_g = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -209,7 +209,7 @@ struct InstrumentPCM instrument_pcm_0320 = {
 };
 
 extern struct SampleData sdance_pap_g_data;
-struct InstrumentPCM instrument_pcm_0321 = {
+struct InstrumentPCM instrument_pcm_pap_g = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -224,7 +224,7 @@ struct InstrumentPCM instrument_pcm_0321 = {
 };
 
 extern struct SampleData sdance_punch_g_data;
-struct InstrumentPCM instrument_pcm_0322 = {
+struct InstrumentPCM instrument_pcm_punch_g = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -254,7 +254,7 @@ struct InstrumentPCM instrument_pcm_0323 = {
 };
 
 extern struct SampleData sdance_and_s_data;
-struct InstrumentPCM instrument_pcm_0324 = {
+struct InstrumentPCM instrument_pcm_and_s = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
@@ -269,7 +269,7 @@ struct InstrumentPCM instrument_pcm_0324 = {
 };
 
 extern struct SampleData sdance_and_g_s_data;
-struct InstrumentPCM instrument_pcm_0325 = {
+struct InstrumentPCM instrument_pcm_and_g_s = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
