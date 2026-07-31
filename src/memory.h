@@ -105,13 +105,6 @@ extern struct SaveBuffer {
             u32 checksum;   // magic and below
             char magic[4];  // "ENOT"
             u16 version;    // convinient if upgrade needed (new games and other similar things)
-            u16 extraLevelScores[TOTAL_EXTRA_LEVELS];
-            u16 extraLevelStates[TOTAL_EXTRA_LEVELS];
-            u16 extraLevelTotalPlays[TOTAL_EXTRA_LEVELS];
-            u16 extraLevelFirstOK[TOTAL_EXTRA_LEVELS];
-            u16 extraLevelFirstSuperb[TOTAL_EXTRA_LEVELS];
-            u16 extraCampaignsCleared[TOTAL_EXTRA_PERFECT_CAMPAIGNS];
-            u16 extraReadingMaterialUnlocked[TOTAL_EXTRA_READING_MATERIALS];
             u8 gameFlags[TOTAL_LEVELS];
         } extraData;
     } data;
