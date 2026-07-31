@@ -200,9 +200,9 @@ script script_space_dance_main
     play_sfx_localized s_space_kou_lets_seqData, s_space_kou_lets_en_seqData
     spawn_cue CUE_SIT_DOWN
     beat_anim
-    rest 9
+    rest 8
     play_sfx_localized s_space_kou_sit_seqData, s_space_kou_sit_en_seqData
-    rest 15
+    rest 16
     space_dance_event01 0, 0
     space_dance_event00 2
     play_sfx_localized s_space_kou_down_seqData, s_space_kou_down_en_seqData
