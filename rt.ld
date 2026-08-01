@@ -1288,6 +1288,7 @@ SECTIONS {
         build/audio/sequences/s_toss_bgm_loop.mid.o(.rodata*);
         build/audio/sequences/s_title_bgm.mid.o(.rodata*);
         build/audio/sequences/s_koihoney_bgm.mid.o(.rodata*);
+        build/audio/sequences/s_koihoney_bgm_en.mid.o(.rodata*);
         build/audio/sequences/s_wish_bgm.mid.o(.rodata*);
         build/audio/sequences/s_wish_bgm_en.mid.o(.rodata*);
         build/audio/sequences/L8_pat_intro.mid.o(.rodata*);
