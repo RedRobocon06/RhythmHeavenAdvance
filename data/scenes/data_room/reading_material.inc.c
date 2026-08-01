@@ -334,7 +334,7 @@ struct ReadingMaterial reading_material_table[] = {
             "All throughout the nation!\n"
             "\n"
             "So let's all turn around and Dondo pan pan\n"
-            "Haa~ Bon Odori~\n"
+            "Hey, it's the Bon Odori!\n"
             "\n"
             "Haa~\n"
             "            Oh when the rain clears away~\n"
@@ -346,7 +346,7 @@ struct ReadingMaterial reading_material_table[] = {
             "The one and only, that's made in JaPAN\n"
             "\n"
             "So let's all turn around and Dondo pan pan\n"
-            "Haa~ Bon Odori~\n",
+            "Hey, it's the Bon Odori!\n",
         /* STYLE ---------------------------------------------------------- */
             /* GFX */ reading_style_sea_gfx_table,
             /* BGM */ &reading_style_sea_bgm
