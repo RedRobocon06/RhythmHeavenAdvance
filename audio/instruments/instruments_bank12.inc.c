@@ -28,13 +28,13 @@ struct InstrumentPCM instrument_pcm_0308 = {
     /* ADSR Rel  */ 0x0B8000,
 };
 
-extern struct SampleData sdance_and_data;
+extern struct SampleData sample_093_data;
 struct InstrumentPCM instrument_pcm_0309 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    /* Sample    */ &sdance_and_data,
+    /* Sample    */ &sample_093_data,
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x000000,
     /* ADSR Atk  */ 0x600000,
