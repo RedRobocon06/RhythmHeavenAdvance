@@ -29,7 +29,7 @@ struct TempoTable sound_tempo_table[] = {
     { &s_toss_bgm_seqData, 106 },
     { &s_toss_bgm_end_seqData, 106 },
     { &s_title_bgm_seqData, 105 },
-    { &s_koihoney_bgm_en_seqData, 137 },
+    { &s_koihoney_bgm_seqData, 137 },
     { &s_wish_bgm_seqData, 204 },
     { &L8_pat_intro_seqData, 109 },
     { &L8_pat01_seqData, 109 },
@@ -158,5 +158,6 @@ struct TempoTable sound_tempo_table[] = {
     { &s_renshu_bgm1_seqData, 125 },
     { &s_renshu_bgm2_seqData, 125 },
     { &s_renshu_bgm3_seqData, 125 },
+    { &s_koihoney_bgm_en_seqData, 137 }
     { NULL, 0 }
 };
