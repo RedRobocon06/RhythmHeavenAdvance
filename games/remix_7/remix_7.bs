@@ -470,7 +470,7 @@ script script_remix_7_main
     rest 24
     call marching_orders_sub_08a837ac
     rest 24
-    call marching_orders_sub_08a8386c_nobeat
+    call marching_orders_sub_08a8386c
     call marching_orders_sub_08a83998
 
     load_tap_trial_remix
