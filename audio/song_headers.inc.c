@@ -3358,6 +3358,8 @@ struct SongHeader s_space_kou_turn_swing_seqData = {
     /* Song Number   */ 1536
 };
 
+#include "audio/sequence_group/space_dance_song_headers.inc.c"
+
 extern const u8 s_guntai1_mid[];
 struct SongHeader s_guntai1_seqData = {
     /* MIDI Sequence */ s_guntai1_mid,
