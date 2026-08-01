@@ -946,6 +946,18 @@ struct SongHeader s_title_bgm_seqData = {
     /* Song Number   */ 1078
 };
 
+extern const u8 s_koihoney_bgm_mid[];
+struct SongHeader s_koihoney_bgm_seqData = {
+    /* MIDI Sequence */ s_koihoney_bgm_mid,
+    /* Sound Player  */ MUSIC_PLAYER_0,
+    /* Bank Number   */ INST_BANK_42,
+    /* Volume        */ 100,
+    /* Priority      */ 50,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_koihoney_bgm_seqName,
+    /* Song Number   */ 1079
+};
+
 extern const u8 s_koihoney_bgm_en_mid[];
 struct SongHeader s_koihoney_bgm_en_seqData = {
     /* MIDI Sequence */ s_koihoney_bgm_en_mid,
@@ -954,7 +966,7 @@ struct SongHeader s_koihoney_bgm_en_seqData = {
     /* Volume        */ 100,
     /* Priority      */ 50,
     /* unk8          */ 0xff,
-    /* Song Title    */ s_koihoney_bgm_en_seqName,
+    /* Song Title    */ NULL,
     /* Song Number   */ 1096
 };
 
