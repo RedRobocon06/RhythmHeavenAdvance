@@ -5128,6 +5128,18 @@
             "pitch": "C5"
         },
         {
+            "sample": "dlessons_one.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "dlessons_two.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "dlessons_three.wav",
+            "pitch": "C5"
+        },
+        {
             "sample": "ninja_bodyguard_huh.wav",
             "pitch": "C5"
         },
@@ -5413,18 +5425,6 @@
         },
         {
             "sample": "wish_EN_sample_754.wav",
-            "pitch": "C5"
-        },
-        {
-            "sample": "dlessons_one.wav",
-            "pitch": "C5"
-        },
-        {
-            "sample": "dlessons_two.wav",
-            "pitch": "C5"
-        },
-        {
-            "sample": "dlessons_three.wav",
             "pitch": "C5"
         }
     ]
