@@ -5128,6 +5128,10 @@
             "pitch": "C5"
         },
         {
+            "sample": "ninja_bodyguard_huh.wav",
+            "pitch": "C5"
+        },
+        {
             "sample": "hsa_EN_sample_672.wav",
             "pitch": "C0"
         },

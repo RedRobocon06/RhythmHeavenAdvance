@@ -1117,13 +1117,13 @@ struct InstrumentPCM instrument_pcm_1553 = {
     /* ADSR Rel  */ 0x18EA90,
 };
 
-extern struct SampleData sample_432_data;
+extern struct SampleData ninja_bodyguard_huh_data;
 struct InstrumentPCM instrument_pcm_1554 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    /* Sample    */ &sample_432_data,
+    /* Sample    */ &ninja_bodyguard_huh_data,
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
