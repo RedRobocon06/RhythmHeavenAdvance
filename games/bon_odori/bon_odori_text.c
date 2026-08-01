@@ -47,7 +47,7 @@ const char text_bon_odori_don_don_pan[] = ".1:0" "Ｄｏ－ｎ　ｄｏ－ｎ　" ".2:0" "
 
 const char text_bon_odori_sore_hikkuri_kaette[] = ".0:0" "Ｓｏ　ｌｅｔ’ｓ　ａｌｌ　ｔｕｒｎ　ａｒｏｕｎｄ　ａｎｄ";
 
-const char text_bon_odori_ha_bon_odori[] = ".0:0" "Ｈａａ～　Ｂｏｎ　Ｏｄｏｒｉ～";
+const char text_bon_odori_ha_bon_odori[] = ".0:0" "Ｈｅｙ，　ｉｔ’ｓ　ｔｈｅ　Ｂｏｎ　Ｏｄｏｒｉ！";
 
 const char text_bon_odori_dondo_panpa[] = ".1:0" "Ｄｏｎｄｏ　" ".2:0" "ｐａｎｐａ";
 
