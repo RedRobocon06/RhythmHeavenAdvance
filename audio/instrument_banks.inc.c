@@ -252,9 +252,9 @@ union Instrument inst_bank_07[] = {
 
 // 128 Instruments
 union Instrument inst_bank_08[] = {
-    /* 000 */ { .pcm = &instrument_pcm_0198 }, { .pcm = &instrument_pcm_0199 }, { .pcm = &instrument_pcm_0200 }, { .pcm = &instrument_pcm_0201 },
-    /* 004 */ { .pcm = &instrument_pcm_0202 }, { .pcm = &instrument_pcm_0203 }, { .pcm = &instrument_pcm_0204 }, NULL,
-    /* 008 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 000 */ { .pcm = &instrument_pcm_sdon }, { .pcm = &instrument_pcm_sdtw }, { .pcm = &instrument_pcm_sdth }, { .pcm = &instrument_pcm_sdgo },
+    /* 004 */ { .pcm = &instrument_pcm_mrup }, { .pcm = &instrument_pcm_0203 }, { .pcm = &instrument_pcm_0204 }, { .pcm = &instrument_pcm_0199 },
+    /* 008 */ { .pcm = &instrument_pcm_sdon }, { .pcm = &instrument_pcm_sdtw }, { .pcm = &instrument_pcm_sdth }, { .pcm = &instrument_pcm_sdgo },
     /* 012 */ NULL,                            NULL,                            NULL,                            NULL,
     /* 016 */ NULL,                            NULL,                            NULL,                            NULL,
     /* 020 */ NULL,                            NULL,                            NULL,                            NULL,
@@ -1970,4 +1970,40 @@ union Instrument inst_bank_wish_en[] = {
     /* 016 */ { .pcm = &instrument_pcm_11396 }, { .pcm = &instrument_pcm_11397 }, { .pcm = &instrument_pcm_11398 }, { .pcm = &instrument_pcm_11399 },
     /* 020 */ { .pcm = &instrument_pcm_11400 }, { .pcm = &instrument_pcm_11401 }, { .pcm = &instrument_pcm_11402 }, NULL,
     /* 024 */ NULL,                            NULL,                            NULL,                            NULL,
+};
+
+// 128 Instruments
+union Instrument inst_bank_space_dance_en[] = {
+    /* 000 */ NULL,                            NULL,                            { .pcm = &instrument_pcm_and },  { .pcm = &instrument_pcm_pose },
+    /* 004 */ { .pcm = &instrument_pcm_let },  { .pcm = &instrument_pcm_sit },  { .pcm = &instrument_pcm_down }, { .pcm = &instrument_pcm_pap },
+    /* 008 */ { .pcm = &instrument_pcm_punch }, { .pcm = &instrument_pcm_and_g }, { .pcm = &instrument_pcm_pose_g }, { .pcm = &instrument_pcm_let_g },
+    /* 012 */ { .pcm = &instrument_pcm_sit_g }, { .pcm = &instrument_pcm_down_g }, { .pcm = &instrument_pcm_pap_g }, { .pcm = &instrument_pcm_punch_g },
+    /* 016 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 020 */ { .pcm = &instrument_pcm_and_s }, { .pcm = &instrument_pcm_and_g_s }, NULL,                            NULL,
+    /* 024 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 028 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 032 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 036 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 040 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 044 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 048 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 052 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 056 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 060 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 064 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 068 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 072 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 076 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 080 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 084 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 088 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 092 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 096 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 100 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 104 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 108 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 112 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 116 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 120 */ NULL,                            NULL,                            NULL,                            NULL,
+    /* 124 */ NULL,                            NULL,                            NULL,                            NULL
 };
