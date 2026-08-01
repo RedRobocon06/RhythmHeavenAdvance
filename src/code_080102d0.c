@@ -4,7 +4,7 @@
 #include "scenes/game_select.h"
 #include "scenes/reading.h"
 #include "scenes/studio.h"
-#include "main.h"
+
 
 // [func_080102d0] Get Music Base Tempo
 u32 get_music_base_tempo(struct SongHeader *seqData) {

@@ -1,6 +1,4 @@
 #include "code_080092cc.h"
-#include "code_08001360.h"
-#include "memory.h"
 
 // Gyro/Rumble Library Interface
 

@@ -2,19 +2,8 @@
 
 #include "global.h"
 #include "levels.h"
-#include "reading_materials.h"
 
 #define SAVE_BUFFER_SIZE sizeof(struct SaveBuffer)
-
-enum AdvanceFlagsEnum {
-    /* 20 */ ADVANCE_FLAG_NON_JP_SFX                    = (1 << 5),
-    /* 40 */ ADVANCE_FLAG_NON_JP_MUSIC                  = (1 << 6),
-};
-
-enum AdvanceGameFlagsEnum {
-    /* 01 */ ADVANCE_GAME_FLAG_NON_JP_SOUNDEFFECTS      = (1 << 0),
-    /* 02 */ ADVANCE_GAME_FLAG_NON_JP_MUSIC             = (1 << 1),
-};
 
 extern struct SaveBuffer {
     /* [0x000] Header */
@@ -30,9 +19,9 @@ extern struct SaveBuffer {
         s8 recentLevelX, recentLevelY;
         s8 recentLevelState;
         u8 recentLevelClearedByBarista;
-        u8 levelStates[TOTAL_BASE_LEVELS];
+        u8 levelStates[TOTAL_LEVELS];
         u16 recentLevelScore;
-        u16 levelScores[TOTAL_BASE_LEVELS];
+        u16 levelScores[TOTAL_LEVELS];
         u16 currentFlow;
         u16 unkB0;
         u8 totalSongs;
@@ -43,11 +32,11 @@ extern struct SaveBuffer {
             u8 drumKitID;
             u8 unk3;
         } studioSongs[45 + 10];
-        u8 levelTotalPlays[TOTAL_BASE_LEVELS]; 
-        u8 levelFirstOK[TOTAL_BASE_LEVELS];
-        u8 levelFirstSuperb[TOTAL_BASE_LEVELS];
+        u8 levelTotalPlays[TOTAL_LEVELS];
+        u8 levelFirstOK[TOTAL_LEVELS];
+        u8 levelFirstSuperb[TOTAL_LEVELS];
         u8 totalPerfects;
-        u8 campaignsCleared[TOTAL_BASE_PERFECT_CAMPAIGNS];
+        u8 campaignsCleared[TOTAL_PERFECT_CAMPAIGNS];
         u8 campaignState;
         u8 campaignAttemptsLeft;
         u8 playsUntilNextCampaign;

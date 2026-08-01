@@ -385,7 +385,7 @@ script karate_man_sub_089ee9cc
     rest 24
     beat_anim
     rest 24
-    beat_anim 
+    beat_anim
     rest 24
     print_text_f 3
     beat_anim

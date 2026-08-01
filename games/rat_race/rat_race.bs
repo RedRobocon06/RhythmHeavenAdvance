@@ -147,17 +147,13 @@ script rat_race_sub_08a1b5f0
     rest 24
     rest 24
     rest 24
-    rest 22
-    rat_race_event06 D_0805d180
-    rest 2
+    rest 24
     rat_race_event06 D_0805d198
     beat_anim
     rest 24
     rest 24
     rest 24
-    rest 22
-    rat_race_event06 D_0805d180
-    rest 2
+    rest 24
     rat_race_event06 D_0805d1ac
     beat_anim
     rest 24
@@ -170,25 +166,19 @@ script rat_race_sub_08a1b5f0
     rest 24
     rest 24
     rest 24
-    rest 22
-    rat_race_event06 D_0805d180
-    rest 2
+    rest 24
     rat_race_event06 D_0805d1d0
     beat_anim
     rest 24
     rest 24
     rest 24
-    rest 22
-    rat_race_event06 D_0805d180
-    rest 2
+    rest 24
     rat_race_event06 D_0805d1e0
     beat_anim
     rest 24
     rest 24
     rest 24
-    rest 22
-    rat_race_event06 D_0805d180
-    rest 2
+    rest 24
     rat_race_event06 D_0805d1f0
     beat_anim
     rest 24
@@ -219,17 +209,13 @@ script rat_race_sub_08a1b998
     rest 24
     rest 24
     rest 24
-    rest 22
-    rat_race_event06 D_0805d180
-    rest 2
+    rest 24
     rat_race_event06 D_0805d214
     beat_anim
     rest 24
     rest 24
     rest 24
-    rest 22
-    rat_race_event06 D_0805d180
-    rest 2
+    rest 24
     rat_race_event0E TRUE
     rat_race_event06 D_0805d220
     run gameplay_set_tutorial NULL
@@ -765,7 +751,6 @@ script script_rat_race_main
     rest 12
     rat_race_event0B
     rat_race_event0C
-    disable_play_inputs
     stop_tracking_perfect_campaign
     rest 24
     rest 24

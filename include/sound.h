@@ -53,7 +53,7 @@ enum DirectSoundModesEnum {
 enum InstrumentBanksEnum {
 	/* 000 */ INST_BANK_UNUSED_0,
 	/* 001 */ INST_BANK_UNUSED_1,
-	/* 002 */ INST_BANK_70,
+	/* 002 */ INST_BANK_UNUSED_2,
 	/* 003 */ INST_BANK_UNUSED_3,
 	/* 004 */ INST_BANK_UNUSED_4,
 	/* 005 */ INST_BANK_54,
@@ -86,7 +86,7 @@ enum InstrumentBanksEnum {
 	/* 032 */ INST_BANK_15,
 	/* 033 */ INST_BANK_16,
 	/* 034 */ INST_BANK_17,
-	/* 035 */ INST_BANK_SPACE_DANCE_EN,
+	/* 035 */ INST_BANK_UNUSED_35,
 	/* 036 */ INST_BANK_UNUSED_36,
 	/* 037 */ INST_BANK_UNUSED_37,
 	/* 038 */ INST_BANK_UNUSED_38,
@@ -100,7 +100,7 @@ enum InstrumentBanksEnum {
 	/* 046 */ INST_BANK_52,
 	/* 047 */ INST_BANK_53,
 	/* 048 */ INST_BANK_UNUSED_48,
-	/* 049 */ INST_BANK_HSA_EN,
+	/* 049 */ INST_BANK_UNUSED_49,
 	/* 050 */ INST_BANK_18,
 	/* 051 */ INST_BANK_19,
 	/* 052 */ INST_BANK_20,
@@ -361,8 +361,7 @@ struct MidiBus {
     u16 *tuningTable;       // MIDI key frequency table.
     union Instrument *soundBank;     // Instrument bank.
     u32 totalChannels:5;             // Total number of MidiChannels controlled by this MidiBus.
-    u32 isPaused:1;                  // TRUE if the owning SoundPlayer is paused
-    u32 priority:26;                 // Priority value.
+    u32 priority:27;                 // Priority value.
     struct MidiChannel *midiChannel; // Child MIDI Channels.
     s8  keyModScale[12];             // Offsets for each key in an octave for randomised key modulation.
 };
