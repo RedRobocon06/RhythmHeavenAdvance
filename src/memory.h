@@ -6,30 +6,6 @@
 
 #define SAVE_BUFFER_SIZE sizeof(struct SaveBuffer)
 
-#define EXTRA_SAVE_DATA_MAGIC   "ENOT" // extra not original thing <3
-#define EXTRA_SAVE_DATA_VERSION 0x0001
-
-// helper functions
-#define SET_ADVANCE_FLAG(flags, flag)   ((flags) |= (flag))
-#define CLEAR_ADVANCE_FLAG(flags, flag) ((flags) &= ~(flag))
-#define CHECK_ADVANCE_FLAG(flags, flag) (((flags) & (flag)) != 0)
-#define TOGGLE_ADVANCE_FLAG(flags, flag) ((flags) ^= (flag))
-
-enum AdvanceFlagsEnum {
-    /* 01 */ ADVANCE_FLAG_SAVE_CONVERTED                = (1 << 0),
-    /* 02 */ ADVANCE_FLAG_USE_ALT_GAME_SELECT_MUSIC     = (1 << 1),
-    /* 04 */ ADVANCE_FLAG_SEEN_DISCLAIMER               = (1 << 2),
-    /* 08 */ ADVANCE_FLAG_SKIP_DISCLAIMER               = (1 << 3),
-    /* 10 */ ADVANCE_FLAG_DISABLE_RUMBLE                = (1 << 4),
-    /* 20 */ ADVANCE_FLAG_NON_JP_SFX                    = (1 << 5),
-    /* 40 */ ADVANCE_FLAG_NON_JP_MUSIC                  = (1 << 6),
-};
-
-enum AdvanceGameFlagsEnum {
-    /* 01 */ ADVANCE_GAME_FLAG_NON_JP_SOUNDEFFECTS      = (1 << 0),
-    /* 02 */ ADVANCE_GAME_FLAG_NON_JP_MUSIC             = (1 << 1),
-};
-
 extern struct SaveBuffer {
     /* [0x000] Header */
     struct SaveBufferHeader {
@@ -62,7 +38,7 @@ extern struct SaveBuffer {
         u8 levelFirstOK[TOTAL_BASE_LEVELS];
         u8 levelFirstSuperb[TOTAL_BASE_LEVELS];
         u8 totalPerfects;
-        u8 campaignsCleared[TOTAL_BASE_PERFECT_CAMPAIGNS];
+        u8 campaignsCleared[TOTAL_PERFECT_CAMPAIGNS];
         u8 campaignState;
         u8 campaignAttemptsLeft;
         u8 playsUntilNextCampaign;
@@ -99,14 +75,6 @@ extern struct SaveBuffer {
             u16 replaySizes[10];
             u8 saveMemory[0x38][0x100];
         } drumReplaysAlloc;
-
-        // Used for Tempo Up and other extra content.
-        struct ExtraTengokuSaveData {
-            u32 checksum;   // magic and below
-            char magic[4];  // "ENOT"
-            u16 version;    // convinient if upgrade needed (new games and other similar things)
-            u8 gameFlags[TOTAL_LEVELS];
-        } extraData;
     } data;
 } *D_030046a8;
 
@@ -117,10 +85,8 @@ extern void *get_save_buffer_end(void);
 extern void *get_memory_heap_start(void);
 extern u32 get_memory_heap_length(void);
 extern s32 generate_save_buffer_checksum(s32 *buffer, u32 size);
-extern void on_extra_save_upgrade(u16 oldVersion, struct ExtraTengokuSaveData *extra);
 extern void init_save_buffer(void);
 extern void clear_save_data(void);
-extern void set_playtest_save_data(void);
 extern s32 copy_to_save_buffer(u8 *cartRAM);
 extern s32 copy_sram_to_save_buffer(void);
 extern s32 copy_sram_backup_to_save_buffer(void);
@@ -130,8 +96,6 @@ extern void write_save_buffer_header_to_sram(u8 *cartRAM);
 extern void write_save_buffer_data_to_sram(u8 *buffer, u32 size);
 extern void flush_save_buffer_to_sram(void);
 extern void flush_save_buffer_to_sram_backup(void);
-extern void update_save_buffer_sram_writes(void);
-extern void finish_save_buffer_sram_writes(void);
 extern void func_080009c8_stub(void);
 extern void func_080009cc_stub(void);
 extern s32 func_080009d0(s16 *);
