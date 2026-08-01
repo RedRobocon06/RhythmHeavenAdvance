@@ -43,44 +43,17 @@ enum MarchingOrdersSoundEffectsEnum {
     MARCHING_SFX_CMD_TURN_RIGHT,
     MARCHING_SFX_CMD_LEFT_FACE,
     MARCHING_SFX_CMD_LEFT_FACE_F,
-    MARCHING_SFX_CMD_TURN_LEFT,
-    MARCHING_SFX_CMD_ATTENTION_2,
-    MARCHING_SFX_CMD_ATTENTION_3,
-    MARCHING_SFX_CMD_F_FACE_RIGHT,
-    MARCHING_SFX_CMD_F_FACE_LEFT,
-};
-
-enum MarchingOrdersCueEnum {
-    MARCHING_CUE_STEP,
-    MARCHING_CUE_TURN_LEFT,
-    MARCHING_CUE_TURN_RIGHT,
-    MARCHING_CUE_HALT
+    MARCHING_SFX_CMD_TURN_LEFT
 };
 
 
 // Engine Types:
 struct MarchingOrdersEngineData {
-    u8 version;
-    struct BitmapFontOBJ *font;
-    struct Marcher {
-        s16 sprite;
-        s16 headSprite;
-        u8 currentAction;
-        u16 idleTimer;
-        u8 idled;
-    } marchers[4];
-    u8 marcherNextFoot;
-    u16 playerActionTimer;
-    s16 commanderSprite;
-    u16 commanderActionTimer;
-    s16 textSprite;
-    s16 tutorialIcon;
-    u8 conveyorEnabled;
-    u8 marchersPointing;
+    u8 pad[0x48];
 };
 
 struct MarchingOrdersCue {
-    u8 command;
+    /* add fields here */
 };
 
 struct MarchingSfxData {
@@ -99,7 +72,7 @@ extern struct Animation **marching_anim_table[];
 extern struct CompressedData *marching_buffered_textures[];
 extern struct GraphicsTable *marching_gfx_tables[];
 extern struct Vector2 D_089e5368[][4];
-extern struct MarchingSfxData marching_sfx_table[][18];
+extern struct MarchingSfxData marching_sfx_table[][12];
 
 
 // Functions:
