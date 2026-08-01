@@ -1,10 +1,10 @@
-extern struct SampleData fireworks_02_data;
+extern struct SampleData sample_883_data;
 struct InstrumentPCM instrument_pcm_1608 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    /* Sample    */ &fireworks_02_data,
+    /* Sample    */ &sample_883_data,
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
@@ -13,13 +13,13 @@ struct InstrumentPCM instrument_pcm_1608 = {
     /* ADSR Rel  */ 0x1FC000,
 };
 
-extern struct SampleData fireworks_01_data;
+extern struct SampleData sample_884_data;
 struct InstrumentPCM instrument_pcm_1609 = {
     /* Type      */ INSTRUMENT_PCM_FIXED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    /* Sample    */ &fireworks_01_data,
+    /* Sample    */ &sample_884_data,
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
