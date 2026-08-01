@@ -117,9 +117,7 @@ script script_remix_1_main
     enable_pause_menu
     rest 24
     rest 24
-    rest 18
-    play_sfx s_guntai_v_zentai_a_seqData
-    rest 6
+    rest 24
     start_tracking_perfect_campaign
     set_results_header D_0805cba0
     import_marking_criteria remix_1_marking_criteria
@@ -128,15 +126,7 @@ script script_remix_1_main
     set_marking_criteria 0
     set_game_fade_in_time 0
     play_music Lesson1_seqData
-    clear_text_f
-    marching_orders_event01
-    play_sfx s_guntai_v_zentai_ten_seqData
-    rest 9
-    play_sfx s_guntai_v_zentai_ttion_seqData
-    rest 15
-    rest 24
-    call marching_orders_sub_08a837ac
-    rest 24
+    call marching_orders_sub_08a83848
     play_music L1_pat01_seqData
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
@@ -410,7 +400,6 @@ script script_remix_1_main
     rest 24
     rest 24
     rest 24
-    spaceball_prep_pitcher
     rest 24
     play_music L1_pat10_seqData
     spaceball_zoom_camera 0xff00, 192
@@ -514,7 +503,6 @@ script script_remix_1_main
     rest 24
     rest 24
     rest 24
-    spaceball_prep_pitcher
     spaceball_zoom_camera 0xfc00, 23
     rest 24
     play_music L1_pat13_seqData
