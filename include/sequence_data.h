@@ -722,3 +722,7 @@ extern struct SongHeader s_f_marcher2_v_migi_seqData;
 extern struct SongHeader s_f_marcher2_v_hidarimukeL_seqData;
 extern struct SongHeader s_f_marcher2_v_hidarimukeS_seqData;
 extern struct SongHeader s_f_marcher2_v_hidari_seqData;
+extern struct SongHeader s_sdance_one_seqData;
+extern struct SongHeader s_sdance_two_seqData;
+extern struct SongHeader s_sdance_three_seqData;
+extern struct SongHeader s_sdance_go_seqData;

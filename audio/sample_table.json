@@ -5128,34 +5128,6 @@
             "pitch": "C5"
         },
         {
-            "sample": "ninja_bodyguard_huh.wav",
-            "pitch": "C5"
-        },
-        {
-            "sample": "fireworks_01.wav",
-            "pitch": "C5"
-        },
-        {
-            "sample": "fireworks_02.wav",
-            "pitch": "C5"
-        },
-        {
-            "sample": "fireworks_count_one.wav",
-            "pitch": "C5"
-        },
-        {
-            "sample": "fireworks_count_two.wav",
-            "pitch": "C5"
-        },
-        {
-            "sample": "fireworks_count_three.wav",
-            "pitch": "C5"
-        },
-        {
-            "sample": "fireworks_count_go.wav",
-            "pitch": "C5"
-        },
-        {
             "sample": "hsa_EN_sample_672.wav",
             "pitch": "C0"
         },
@@ -5416,6 +5388,50 @@
             "pitch": "C5"
         },
         {
+            "sample": "sdance_one.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_two.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_three.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_go.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "ninja_bodyguard_huh.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_01.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_02.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_one.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_two.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_three.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_go.wav",
+            "pitch": "C5"
+        },
+        {
             "sample": "confmachine_01.wav",
             "pitch": "C5"
         },
@@ -5485,6 +5501,10 @@
         },
         {
             "sample": "confmachine_18.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "mrupbeat_a.wav",
             "pitch": "C5"
         },
         {
