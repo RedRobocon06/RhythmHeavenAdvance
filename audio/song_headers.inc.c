@@ -954,7 +954,7 @@ struct SongHeader s_koihoney_bgm_en_seqData = {
     /* Volume        */ 100,
     /* Priority      */ 50,
     /* unk8          */ 0xff,
-    /* Song Title    */ s_koihoney_bgm_en_seqName,
+    /* Song Title    */ s_koihoney_bgm_seqName,
     /* Song Number   */ 1079
 };
 
