@@ -73,13 +73,13 @@ struct InstrumentPCM instrument_pcm_0186 = {
     /* ADSR Rel  */ 0x13E350,
 };
 
-extern struct SampleData sample_131_data;
+extern struct SampleData fireworks_count_one_data;
 struct InstrumentPCM instrument_pcm_0187 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    /* Sample    */ &sample_131_data,
+    /* Sample    */ &fireworks_count_one_data,
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
@@ -88,13 +88,13 @@ struct InstrumentPCM instrument_pcm_0187 = {
     /* ADSR Rel  */ 0x13E350,
 };
 
-extern struct SampleData sample_132_data;
+extern struct SampleData fireworks_count_one_data;
 struct InstrumentPCM instrument_pcm_0188 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    /* Sample    */ &sample_132_data,
+    /* Sample    */ &fireworks_count_one_data,
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
@@ -103,13 +103,13 @@ struct InstrumentPCM instrument_pcm_0188 = {
     /* ADSR Rel  */ 0x13E350,
 };
 
-extern struct SampleData sample_133_data;
+extern struct SampleData fireworks_count_two_data;
 struct InstrumentPCM instrument_pcm_0189 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    /* Sample    */ &sample_133_data,
+    /* Sample    */ &fireworks_count_two_data,
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
@@ -118,13 +118,13 @@ struct InstrumentPCM instrument_pcm_0189 = {
     /* ADSR Rel  */ 0x13E350,
 };
 
-extern struct SampleData sample_134_data;
+extern struct SampleData fireworks_count_three_data;
 struct InstrumentPCM instrument_pcm_0190 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    /* Sample    */ &sample_134_data,
+    /* Sample    */ &fireworks_count_three_data,
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
@@ -133,13 +133,13 @@ struct InstrumentPCM instrument_pcm_0190 = {
     /* ADSR Rel  */ 0x13E350,
 };
 
-extern struct SampleData sample_135_data;
+extern struct SampleData fireworks_count_go_data;
 struct InstrumentPCM instrument_pcm_0191 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    /* Sample    */ &sample_135_data,
+    /* Sample    */ &fireworks_count_go_data,
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,

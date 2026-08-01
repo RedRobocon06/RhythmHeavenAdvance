@@ -5132,6 +5132,30 @@
             "pitch": "C5"
         },
         {
+            "sample": "fireworks_01.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_02.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_one.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_two.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_three.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_go.wav",
+            "pitch": "C5"
+        },
+        {
             "sample": "hsa_EN_sample_672.wav",
             "pitch": "C0"
         },
@@ -5389,6 +5413,18 @@
         },
         {
             "sample": "wish_EN_sample_754.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "dlessons_one.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "dlessons_two.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "dlessons_three.wav",
             "pitch": "C5"
         }
     ]
