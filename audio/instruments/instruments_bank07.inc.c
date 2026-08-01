@@ -88,13 +88,13 @@ struct InstrumentPCM instrument_pcm_0187 = {
     /* ADSR Rel  */ 0x13E350,
 };
 
-extern struct SampleData fireworks_count_one_data;
+extern struct SampleData sample_132_data;
 struct InstrumentPCM instrument_pcm_0188 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    /* Sample    */ &fireworks_count_one_data,
+    /* Sample    */ &sample_132_data,
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
