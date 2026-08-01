@@ -491,7 +491,6 @@ void sick_beats_update_doctor(void) {
 
 // Game Engine Update
 void sick_beats_engine_update(void) {
-    gSickBeats->highestPriorityState = 0; // Reset priority each frame
     sick_beats_update_yellow_microbe();
     sick_beats_update_forks();
     sick_beats_update_virus();

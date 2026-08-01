@@ -2,7 +2,6 @@
 #include "scenes.h"
 #include "reading.h"
 #include "graphics/data_room/data_room_graphics.h"
-#include "src/code_080092cc.h"
 
 
 /* READING MATERIAL SCENE */

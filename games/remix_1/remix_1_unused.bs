@@ -129,31 +129,19 @@ script script_remix_1_unused_main
     enable_pause_menu
     rest 24
     rest 24
-    rest 18
-    play_sfx s_guntai_v_zentai_a_seqData
-    rest 6
-    start_tracking_perfect_campaign
-    set_results_header D_0805cba0
+    rest 24
+    set_results_header D_0805cadc
     import_marking_criteria remix_1_unused_marking_criteria
-    run gameplay_set_mercy_count, 2
     start_tracking_inputs
     set_marking_criteria 0
     set_game_fade_in_time 0
     play_music Lesson1_seqData
-    clear_text_f
-    play_sfx s_guntai_v_zentai_ten_seqData
-    marching_orders_event01
-    rest 9
-    play_sfx s_guntai_v_zentai_ttion_seqData
-    rest 15
-    rest 24
-    call marching_orders_sub_08a837ac
-    rest 24
+    call marching_orders_sub_08a83848
     play_music L1_pat01_seqData
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
-    call marching_orders_sub_08a8386c_nobeat
+    call marching_orders_sub_08a8386c
     call marching_orders_sub_08a83998
 
     load_karate_man
@@ -171,7 +159,6 @@ script script_remix_1_unused_main
 
     load_marching_orders
     rest 24
-    marching_orders_play_voice_sfx SHOUT_START
     marching_orders_event00 263
     spawn_cue CUE_STEP
     beat_anim
@@ -180,7 +167,7 @@ script script_remix_1_unused_main
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
-    call marching_orders_sub_08a8386c_nobeat
+    call marching_orders_sub_08a8386c
     call marching_orders_sub_08a83998
 
     load_karate_man
@@ -207,7 +194,6 @@ script script_remix_1_unused_main
 
     load_marching_orders
     rest 24
-    marching_orders_play_voice_sfx SHOUT_START
     marching_orders_event00 263
     spawn_cue CUE_STEP
     beat_anim
@@ -216,7 +202,7 @@ script script_remix_1_unused_main
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
-    call marching_orders_sub_08a8386c_nobeat
+    call marching_orders_sub_08a8386c
     call marching_orders_sub_08a83998
 
     load_karate_man
@@ -248,7 +234,6 @@ script script_remix_1_unused_main
 
     load_marching_orders
     rest 24
-    marching_orders_play_voice_sfx SHOUT_START
     marching_orders_event00 263
     spawn_cue CUE_STEP
     beat_anim
@@ -257,7 +242,7 @@ script script_remix_1_unused_main
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
-    call marching_orders_sub_08a8386c_nobeat
+    call marching_orders_sub_08a8386c
     call marching_orders_sub_08a83998
 
     load_karate_man
@@ -828,7 +813,6 @@ script script_remix_1_unused_main
     rest 24
     beat_anim
     rest 24
-    run gameplay_set_next_cue_hit_sfx, s_f_boxing_just_rock_nc_seqData
     spawn_cue CUE_ROCK
     beat_anim
     rest 24
@@ -838,7 +822,6 @@ script script_remix_1_unused_main
     load_clappy_trio
     clappy_trio_crouch_smirk
     rest 12
-    run stop_sound, s_f_boxing_just_rock_nc_seqData
     clappy_trio_do_clap 0
     rest 12
     clappy_trio_do_clap 1
@@ -871,7 +854,7 @@ script script_remix_1_unused_main
     rest 24
 
     load_karate_man
-    print_text_f 5
+    print_text_f 4
     rest 24
     rest 24
     clear_text_f

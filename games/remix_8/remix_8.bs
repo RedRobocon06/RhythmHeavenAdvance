@@ -124,23 +124,14 @@ script script_remix_8_main
     start_perfect_campaign
     rest 24
     enable_pause_menu
-    rest 18
-    marching_orders_play_voice_sfx VOICE_ATTENTION
-    rest 6
+    rest 24
     play_music L8_pat_intro_seqData
-    marching_orders_event01
-    marching_orders_play_voice_sfx VOICE_ATTENTION_2
-    rest 9
-    marching_orders_play_voice_sfx VOICE_ATTENTION_3
-    rest 15
-    rest 24
-    call marching_orders_sub_08a837ac
-    rest 24
+    call marching_orders_sub_08a83848
     set_game_fade_in_time 0
     play_music L8_pat01_seqData
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
-    call marching_orders_sub_08a8386c_nobeat
+    call marching_orders_sub_08a8386c
     call marching_orders_sub_08a83998
 
     load_karate_man
@@ -420,7 +411,6 @@ script script_remix_8_main
     spawn_cue CUE_ROCK
     rest 24
     print_text_f 3
-    beat_anim
     rest 24
     clear_text_f
     spawn_cue CUE_ROCK
@@ -488,13 +478,13 @@ script script_remix_8_main
     rest 24
     beat_anim
     rest 22
-    play_sfx_localized s_space_ikeo_turn_seqData, s_space_ikeo_turn_en_seqData
+    play_sfx s_space_ikeo_turn_seqData
     rest 2
     space_dance_event00 3
     spawn_cue CUE_TURN_RIGHT
     beat_anim
     rest 22
-    play_sfx_localized s_space_ikeo_right_seqData, s_space_ikeo_right_en_seqData
+    play_sfx s_space_ikeo_right_seqData
     rest 2
     space_dance_event00 0
     beat_anim
@@ -541,9 +531,7 @@ script script_remix_8_main
     clear_text_f
     marching_orders_event01
     play_sfx s_guntai_v_migi_muke1_seqData
-    rest 12
-    play_sfx s_guntai_v_migi_muke1_face_seqData
-    rest 12
+    rest 24
     rest 24
     marching_orders_event01
     play_sfx s_guntai_v_migi_seqData
@@ -552,7 +540,6 @@ script script_remix_8_main
     marching_orders_event00 4
     marching_orders_play_voice_sfx SHOUT_TURN
     rest 12
-    clear_text_f
 
     load_rhythm_tweezers_potato
     rhythm_tweezers_show_veg_mask

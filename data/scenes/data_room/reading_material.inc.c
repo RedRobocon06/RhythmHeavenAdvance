@@ -1,5 +1,3 @@
-#include "reading_materials.h"
-
 // [D_089d7e74] Reading Material Table
 struct ReadingMaterial reading_material_table[] = {
     /* WELCOME ("Rhythm Tengoku Welcome") */ {
@@ -336,7 +334,7 @@ struct ReadingMaterial reading_material_table[] = {
             "All throughout the nation!\n"
             "\n"
             "So let's all turn around and Dondo pan pan\n"
-            "Hey, it's the Bon Odori!\n"
+            "Haa~ Bon Odori~\n"
             "\n"
             "Haa~\n"
             "            Oh when the rain clears away~\n"
@@ -348,7 +346,7 @@ struct ReadingMaterial reading_material_table[] = {
             "The one and only, that's made in JaPAN\n"
             "\n"
             "So let's all turn around and Dondo pan pan\n"
-            "Hey, it's the Bon Odori!\n",
+            "Haa~ Bon Odori~\n",
         /* STYLE ---------------------------------------------------------- */
             /* GFX */ reading_style_sea_gfx_table,
             /* BGM */ &reading_style_sea_bgm

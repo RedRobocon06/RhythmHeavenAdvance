@@ -4,7 +4,7 @@
 #include "scenes/game_select.h"
 #include "scenes/reading.h"
 #include "scenes/studio.h"
-#include "main.h"
+
 
 // [func_080102d0] Get Music Base Tempo
 u32 get_music_base_tempo(struct SongHeader *seqData) {
@@ -34,7 +34,6 @@ void reset_game_save_data(void) {
     data->recentLevelClearedByBarista = FALSE;
     data->currentFlow = 0;
     data->unkB0 = 0;
-    data->advanceFlags = 0;
     data->recentLevelScore = DEFAULT_LEVEL_SCORE;
 
     for (i = 0; i < TOTAL_LEVELS; i++) {
@@ -90,9 +89,6 @@ void reset_game_save_data(void) {
     data->drumKitsUnlocked[STUDIO_DRUM_STANDARD] = TRUE;
     data->readingMaterialUnlocked[READING_MATERIAL_WELCOME] = TRUE;
     data->readingMaterialUnlocked[READING_MATERIAL_MANUAL] = TRUE;
-
-    SET_ADVANCE_FLAG(data->advanceFlags, ADVANCE_FLAG_NON_JP_SFX);
-    SET_ADVANCE_FLAG(data->advanceFlags, ADVANCE_FLAG_NON_JP_MUSIC);
 }
 
 
