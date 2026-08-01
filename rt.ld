@@ -1745,6 +1745,10 @@ SECTIONS {
         build/audio/sequences/s_iai_bgm_studio.mid.o(.rodata*);
         build/audio/sequences/s_rabbit_bgm_studio.mid.o(.rodata*);
         build/audio/sequences/s_rat_bgm_studio.mid.o(.rodata*);
+        build/audio/sequences/s_sdance_one_mid.o(.rodata*);
+        build/audio/sequences/s_sdance_two_mid.o(.rodata*);
+        build/audio/sequences/s_sdance_three_mid.o(.rodata*);
+        build/audio/sequences/s_sdance_go_mid.o(.rodata*);
         build/audio/sequences/s_f_dummy.mid.o(.rodata*);
         build/audio/sequences/s_f_dummy_vol0.mid.o(.rodata*);
         build/audio/sequences/s_f_result_bad.mid.o(.rodata*);
