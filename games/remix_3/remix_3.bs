@@ -568,9 +568,7 @@ script script_remix_3_main
     rest 24
     bunny_hop_event02 TRUE
     rest 24
-    set_localized BEATSCRIPT_LOCALIZED_COND_GLOBAL_NON_JP_MUSIC
     print_text_s D_0806a0fc
-    set_localized BEATSCRIPT_LOCALIZED_COND_GLOBAL_NON_JP_SFX
     rest 24
     rest 24
     bunny_hop_event01 1
