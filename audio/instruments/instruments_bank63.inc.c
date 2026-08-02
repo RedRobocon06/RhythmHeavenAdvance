@@ -1,10 +1,10 @@
-extern struct SampleData sample_935_data;
+extern struct SampleData RAPWOMEN_EN_sample_935_data;
 struct InstrumentPCM instrument_pcm_1714 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
     /* Panning   */ 127,
-    /* Sample    */ &sample_935_data,
+    /* Sample    */ &RAPWOMEN_EN_sample_935_data,
     /* ADSR Init */ 0x7F0000,
     /* ADSR Sus  */ 0x7F0000,
     /* ADSR Atk  */ 0x600000,
