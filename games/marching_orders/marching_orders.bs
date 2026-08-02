@@ -164,7 +164,6 @@ script script_marching_orders_main
     call marching_orders_sub_08a83998
     set_marking_criteria 0
     call marching_orders_sub_08a8452c
-    rest 24
     clear_text_f
     rest 24
     marching_orders_event00 258
