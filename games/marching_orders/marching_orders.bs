@@ -129,7 +129,7 @@ script script_marching_orders_main
     set_marking_criteria 0
     call marching_orders_sub_08a8386c
     set_marking_criteria 0
-    call marching_orders_sub_08a8386c
+    call marching_orders_sub_08a8386c_nobeat
     set_marking_criteria 0
     call marching_orders_sub_08a83998
     rest 24
@@ -144,11 +144,11 @@ script script_marching_orders_main
     marching_orders_event00 258
     rest 24
     marching_orders_event00 258
-    call marching_orders_sub_08a83848
+    call marching_orders_sub_08a83848_beatstop
     set_marking_criteria 0
     call marching_orders_sub_08a8386c
     set_marking_criteria 0
-    call marching_orders_sub_08a8386c
+    call marching_orders_sub_08a8386c_nobeat
     set_marking_criteria 0
     call marching_orders_sub_08a83998
     set_marking_criteria 0
@@ -159,7 +159,7 @@ script script_marching_orders_main
     marching_orders_event00 258
     rest 24
     marching_orders_event00 258
-    call marching_orders_sub_08a83848
+    call marching_orders_sub_08a83848_beatstop_nobeat
     set_marking_criteria 0
     call marching_orders_sub_08a83998
     set_marking_criteria 0
@@ -172,11 +172,11 @@ script script_marching_orders_main
     marching_orders_event00 258
     rest 24
     marching_orders_event00 258
-    call marching_orders_sub_08a83848
+    call marching_orders_sub_08a83848_beatstop
     set_marking_criteria 0
     call marching_orders_sub_08a8386c
     set_marking_criteria 0
-    call marching_orders_sub_08a8386c
+    call marching_orders_sub_08a8386c_nobeat
     set_marking_criteria 0
     call marching_orders_sub_08a83b24
     set_marking_criteria 1
@@ -188,12 +188,12 @@ script script_marching_orders_main
     call marching_orders_sub_08a83848
     print_text_f D_0805c8b4
     set_marking_criteria 0
-    call marching_orders_sub_08a8386c
+    call marching_orders_sub_08a8386c_noclear
     marching_orders_event03
     set_marking_criteria 0
-    call marching_orders_sub_08a8386c
+    call marching_orders_sub_08a8386c_noclear
     set_marking_criteria 0
-    call marching_orders_sub_08a8386c
+    call marching_orders_sub_08a8386c_noclear
     marching_orders_event00 8
     play_sfx s_guntai_foot1_seqData
     rest 12
