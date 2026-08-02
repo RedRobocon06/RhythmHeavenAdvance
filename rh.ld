@@ -480,7 +480,6 @@ SECTIONS {
         build/games/sneaky_spirits/graphics/sneaky_spirits_prologue_anim.c.o(.data);
         build/games/sneaky_spirits/graphics/sneaky_spirits_prologue_pal.c.o(.data);
         build/games/sneaky_spirits/graphics/sneaky_spirits_2_prologue_anim.c.o(.data);
-        build/games/sneaky_spirits/graphics/sneaky_spirits_2_prologue_pal.c.o(.data);
         build/games/spaceball/graphics/spaceball_prologue_anim.c.o(.data);
         build/games/spaceball/graphics/spaceball_prologue_pal.c.o(.data);
         build/games/spaceball/graphics/spaceball_2_prologue_anim.c.o(.data);
@@ -498,13 +497,11 @@ SECTIONS {
         build/games/night_walk/graphics/night_walk_prologue_anim.c.o(.data);
         build/games/night_walk/graphics/night_walk_prologue_pal.c.o(.data);
         build/games/night_walk/graphics/night_walk_2_prologue_anim.c.o(.data);
-        build/games/night_walk/graphics/night_walk_2_prologue_pal.c.o(.data);
         build/games/showtime/graphics/showtime_prologue_anim.c.o(.data);
         build/games/showtime/graphics/showtime_prologue_pal.c.o(.data);
         build/games/bouncy_road/graphics/bouncy_road_prologue_anim.c.o(.data);
         build/games/bouncy_road/graphics/bouncy_road_prologue_pal.c.o(.data);
         build/games/bouncy_road/graphics/bouncy_road_2_prologue_anim.c.o(.data);
-        build/games/bouncy_road/graphics/bouncy_road_2_prologue_pal.c.o(.data);
         build/games/rhythm_tweezers/graphics/rhythm_tweezers_prologue_anim.c.o(.data);
         build/games/rhythm_tweezers/graphics/rhythm_tweezers_prologue_pal.c.o(.data);
         build/games/rhythm_tweezers/graphics/rhythm_tweezers_2_prologue_anim.c.o(.data);
