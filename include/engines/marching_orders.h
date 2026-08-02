@@ -43,17 +43,44 @@ enum MarchingOrdersSoundEffectsEnum {
     MARCHING_SFX_CMD_TURN_RIGHT,
     MARCHING_SFX_CMD_LEFT_FACE,
     MARCHING_SFX_CMD_LEFT_FACE_F,
-    MARCHING_SFX_CMD_TURN_LEFT
+    MARCHING_SFX_CMD_TURN_LEFT,
+    MARCHING_SFX_CMD_ATTENTION_2,
+    MARCHING_SFX_CMD_ATTENTION_3,
+    MARCHING_SFX_CMD_F_FACE_RIGHT,
+    MARCHING_SFX_CMD_F_FACE_LEFT,
+};
+
+enum MarchingOrdersCueEnum {
+    MARCHING_CUE_STEP,
+    MARCHING_CUE_TURN_LEFT,
+    MARCHING_CUE_TURN_RIGHT,
+    MARCHING_CUE_HALT
 };
 
 
 // Engine Types:
 struct MarchingOrdersEngineData {
-    u8 pad[0x48];
+    u8 version;
+    struct BitmapFontOBJ *font;
+    struct Marcher {
+        s16 sprite;
+        s16 headSprite;
+        u8 currentAction;
+        u16 idleTimer;
+        u8 idled;
+    } marchers[4];
+    u8 marcherNextFoot;
+    u16 playerActionTimer;
+    s16 commanderSprite;
+    u16 commanderActionTimer;
+    s16 textSprite;
+    s16 tutorialIcon;
+    u8 conveyorEnabled;
+    u8 marchersPointing;
 };
 
 struct MarchingOrdersCue {
-    /* add fields here */
+    u8 command;
 };
 
 struct MarchingSfxData {
