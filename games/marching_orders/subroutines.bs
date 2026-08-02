@@ -417,7 +417,9 @@ return
 script marching_orders_sub_08a8452c
     marching_orders_event01
     marching_orders_play_voice_sfx VOICE_LEFT_FACE
-    rest 24
+    rest 11
+    marching_orders_play_voice_sfx VOICE_LEFT_FACE_2
+    rest 13
     rest 24
     marching_orders_event01
     marching_orders_play_voice_sfx VOICE_TURN_LEFT
