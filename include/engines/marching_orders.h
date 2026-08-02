@@ -103,7 +103,7 @@ extern struct MarchingSfxData marching_sfx_table[][18];
 
 
 // Functions:
-extern struct Animation *func_08034100(u32 anim); // Get Animation
+extern struct Animation *func_08034100(s32 anim); // Get Animation
 extern void marching_init_gfx3(void); // Graphics Init. 3
 extern void marching_init_gfx2(void); // Graphics Init. 2
 extern void marching_init_gfx1(void); // Graphics Init. 1
