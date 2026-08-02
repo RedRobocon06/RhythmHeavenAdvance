@@ -103,9 +103,9 @@ ALL_DIRS       := $(sort $(ALL_DIRS)) # remove duplicates
 BUILD_DIRS     := $(BUILD) $(addprefix $(BUILD)/,$(ALL_DIRS))
 
 ifeq ($(NONMATCHING), 0)
-    LD_SCRIPT := rt.ld
+    LD_SCRIPT := rh.ld
 else
-    LD_SCRIPT := rt_modern.ld
+    LD_SCRIPT := rh_modern.ld
 endif
 
 #---------------------------------------------------------------------------------
