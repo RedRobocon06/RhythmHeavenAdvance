@@ -1834,9 +1834,9 @@ struct SongHeader s_toss_red_blue1_seqData = {
     /* Song Number   */ 1320
 };
 
-extern const u8 s_toss_red_blue2_mid[];
+extern const u8 s_toss_red_blue2_en_mid[];
 struct SongHeader s_toss_red_blue2_seqData = {
-    /* MIDI Sequence */ s_toss_red_blue2_mid,
+    /* MIDI Sequence */ s_toss_red_blue2_en_mid,
     /* Sound Player  */ SFX_PLAYER_0,
     /* Bank Number   */ INST_BANK_9,
     /* Volume        */ 110,
@@ -1858,9 +1858,9 @@ struct SongHeader s_toss_red_blue3_seqData = {
     /* Song Number   */ 1322
 };
 
-extern const u8 s_toss_red_yelw1_mid[];
+extern const u8 s_toss_red_yelw1_en_mid[];
 struct SongHeader s_toss_red_yelw1_seqData = {
-    /* MIDI Sequence */ s_toss_red_yelw1_mid,
+    /* MIDI Sequence */ s_toss_red_yelw1_en_mid,
     /* Sound Player  */ SFX_PLAYER_0,
     /* Bank Number   */ INST_BANK_9,
     /* Volume        */ 120,
@@ -1906,9 +1906,9 @@ struct SongHeader s_toss_red_red_seqData = {
     /* Song Number   */ 1329
 };
 
-extern const u8 s_toss_red_before_mid[];
+extern const u8 s_toss_red_before_en_mid[];
 struct SongHeader s_toss_red_before_seqData = {
-    /* MIDI Sequence */ s_toss_red_before_mid,
+    /* MIDI Sequence */ s_toss_red_before_en_mid,
     /* Sound Player  */ SFX_PLAYER_0,
     /* Bank Number   */ INST_BANK_9,
     /* Volume        */ 120,
@@ -1942,9 +1942,9 @@ struct SongHeader s_toss_blue_red1_seqData = {
     /* Song Number   */ 1332
 };
 
-extern const u8 s_toss_blue_red2_mid[];
+extern const u8 s_toss_blue_red2_en_mid[];
 struct SongHeader s_toss_blue_red2_seqData = {
-    /* MIDI Sequence */ s_toss_blue_red2_mid,
+    /* MIDI Sequence */ s_toss_blue_red2_en_mid,
     /* Sound Player  */ SFX_PLAYER_1,
     /* Bank Number   */ INST_BANK_9,
     /* Volume        */ 115,
@@ -1966,9 +1966,9 @@ struct SongHeader s_toss_blue_red3_seqData = {
     /* Song Number   */ 1334
 };
 
-extern const u8 s_toss_blue_yelw1_mid[];
+extern const u8 s_toss_blue_yelw1_en_mid[];
 struct SongHeader s_toss_blue_yelw1_seqData = {
-    /* MIDI Sequence */ s_toss_blue_yelw1_mid,
+    /* MIDI Sequence */ s_toss_blue_yelw1_en_mid,
     /* Sound Player  */ SFX_PLAYER_1,
     /* Bank Number   */ INST_BANK_9,
     /* Volume        */ 110,
@@ -1990,9 +1990,9 @@ struct SongHeader s_toss_blue_yelw2_seqData = {
     /* Song Number   */ 1336
 };
 
-extern const u8 s_toss_blue_yelw3_mid[];
+extern const u8 s_toss_blue_yelw3_en_mid[];
 struct SongHeader s_toss_blue_yelw3_seqData = {
-    /* MIDI Sequence */ s_toss_blue_yelw3_mid,
+    /* MIDI Sequence */ s_toss_blue_yelw3_en_mid,
     /* Sound Player  */ SFX_PLAYER_1,
     /* Bank Number   */ INST_BANK_9,
     /* Volume        */ 115,
@@ -2038,9 +2038,9 @@ struct SongHeader s_toss_blue_break_seqData = {
     /* Song Number   */ 1343
 };
 
-extern const u8 s_toss_yelw_red1_mid[];
+extern const u8 s_toss_yelw_red1_en_mid[];
 struct SongHeader s_toss_yelw_red1_seqData = {
-    /* MIDI Sequence */ s_toss_yelw_red1_mid,
+    /* MIDI Sequence */ s_toss_yelw_red1_en_mid,
     /* Sound Player  */ SFX_PLAYER_2,
     /* Bank Number   */ INST_BANK_9,
     /* Volume        */ 127,
