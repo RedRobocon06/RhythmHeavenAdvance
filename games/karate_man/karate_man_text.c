@@ -22,14 +22,14 @@ const char D_0805abc4[] =
 const char D_0805abdc[] = "The Master speaks...";
 
 const char D_0805abec[] =
-    "Welcome to karate \n"
+    "Welcome to karate\n"
     "training!";
 
 const char D_0805ac0c[] = 
-    "Watch out for flying\n"
-    "objects, and press ‡M\n"
-    "to punch them!\n"
-    "The timing's a little tricky!";
+    "In this first rhythm game,\n"
+    "press ‡M to punch flying\n"
+    "objects, but the timing's\n"
+    "a little tricky!";
 
 const char D_0805ac60[] =
     "Here, why don't you give\n"
