@@ -8748,6 +8748,18 @@ struct SongHeader s_f_marcher2_v_migimukeL_seqData = {
     /* Song Number   */ 704
 };
 
+extern const u8 s_f_marcher2_v_migimukeL_face_mid[];
+struct SongHeader s_f_marcher2_v_migimukeL_face_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_migimukeL_face_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 90,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_migimukeL_face_seqName,
+    /* Song Number   */ 1930
+};
+
 extern const u8 s_f_marcher2_v_migimukeS_mid[];
 struct SongHeader s_f_marcher2_v_migimukeS_seqData = {
     /* MIDI Sequence */ s_f_marcher2_v_migimukeS_mid,
@@ -8758,6 +8770,18 @@ struct SongHeader s_f_marcher2_v_migimukeS_seqData = {
     /* unk8          */ 0xff,
     /* Song Title    */ s_f_marcher2_v_migimukeS_seqName,
     /* Song Number   */ 705
+};
+
+extern const u8 s_f_marcher2_v_migimukeS2_mid[];
+struct SongHeader s_f_marcher2_v_migimukeS2_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_migimukeS2_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 90,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_migimukeS2_seqName,
+    /* Song Number   */ 1934
 };
 
 extern const u8 s_f_marcher2_v_migi_mid[];
@@ -8784,6 +8808,18 @@ struct SongHeader s_f_marcher2_v_hidarimukeL_seqData = {
     /* Song Number   */ 707
 };
 
+extern const u8 s_f_marcher2_v_hidarimukeL_face_mid[];
+struct SongHeader s_f_marcher2_v_hidarimukeL_face_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_hidarimukeL_face_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 90,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_hidarimukeL_face_seqName,
+    /* Song Number   */ 1931
+};
+
 extern const u8 s_f_marcher2_v_hidarimukeS_mid[];
 struct SongHeader s_f_marcher2_v_hidarimukeS_seqData = {
     /* MIDI Sequence */ s_f_marcher2_v_hidarimukeS_mid,
@@ -8794,6 +8830,18 @@ struct SongHeader s_f_marcher2_v_hidarimukeS_seqData = {
     /* unk8          */ 0xff,
     /* Song Title    */ s_f_marcher2_v_hidarimukeS_seqName,
     /* Song Number   */ 708
+};
+
+extern const u8 s_f_marcher2_v_hidarimukeS2_mid[];
+struct SongHeader s_f_marcher2_v_hidarimukeS2_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_hidarimukeS2_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 90,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_hidarimukeS2_seqName,
+    /* Song Number   */ 1933
 };
 
 extern const u8 s_f_marcher2_v_hidari_mid[];
