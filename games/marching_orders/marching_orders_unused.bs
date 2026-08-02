@@ -272,32 +272,30 @@ script script_marching_orders_unused_practice
     loop_start
         run beatscript_disable_loops
         marching_orders_event01
-        marching_orders_play_voice_sfx VOICE_RIGHT_FACE_F
-        rest 9
-        marching_orders_play_voice_sfx VOICE_F_FACE_RIGHT
-        rest 15
+        play_sfx s_guntai_v_migi_muke2_seqData
+        rest 24
         marching_orders_event01
-        marching_orders_play_voice_sfx VOICE_TURN_RIGHT
+        play_sfx s_guntai_v_migi_seqData
         spawn_cue CUE_TURN_RIGHT
         beat_anim
         rest 24
         marching_orders_event00 4
         play_sfx s_guntai_v_ka_seqData
         rest 24
+        clear_text_f
         rest 24
         marching_orders_event01
-        marching_orders_play_voice_sfx VOICE_LEFT_FACE_F
-        rest 9
-        marching_orders_play_voice_sfx VOICE_F_FACE_LEFT
-        rest 15
+        play_sfx s_guntai_v_hidari_muke2_seqData
+        rest 24
         marching_orders_event01
-        marching_orders_play_voice_sfx VOICE_TURN_LEFT
+        play_sfx s_guntai_v_hidari_seqData
         spawn_cue CUE_TURN_LEFT
         beat_anim
         rest 24
         marching_orders_event00 3
         play_sfx s_guntai_v_ka_seqData
         rest 24
+        clear_text_f
         rest 24
     loop_end
     loop_start
