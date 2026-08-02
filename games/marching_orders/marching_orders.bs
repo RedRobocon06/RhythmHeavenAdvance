@@ -164,6 +164,7 @@ script script_marching_orders_main
     call marching_orders_sub_08a83998
     set_marking_criteria 0
     call marching_orders_sub_08a8452c
+    rest 24
     clear_text_f
     rest 24
     marching_orders_event00 258
@@ -249,10 +250,12 @@ script script_marching_orders_practice
     marching_orders_event02 -1
     rest 24
     marching_orders_event00 258
-    rest 24
-    marching_orders_event00 256
     clear_text_f
+    rest 18
     loop_start
+        rest 6
+        marching_orders_event00 256
+        clear_text_f
         run beatscript_disable_loops
         marching_orders_event02 3
         marching_orders_event01
@@ -270,6 +273,7 @@ script script_marching_orders_practice
         play_sfx s_guntai_v_ka_seqData
         marching_orders_event02 -1
         rest 24
+        clear_text_f
         marching_orders_event02 4
         marching_orders_event01
         play_sfx s_guntai_v_hidari_muke1_seqData
@@ -307,6 +311,7 @@ script script_marching_orders_practice
         spawn_cue CUE_STEP
         beat_anim
         rest 24
+        clear_text_f
         marching_orders_event00 8
         play_sfx s_guntai_foot1_seqData
         spawn_cue CUE_STEP
@@ -382,6 +387,7 @@ script script_marching_orders_practice
         marching_orders_event02 -1
         rest 18
     loop_end
+    rest 24
     run gameplay_set_tutorial NULL
     mod_music_volume 0, 168
     print_text_f D_0805c8e0
@@ -395,7 +401,6 @@ script script_marching_orders_practice
     rest 24
     clear_text_f
     goto script_marching_orders_main
-
 
 script script_marching_orders_skipped_practice
     set_game_fade_in_time 0
