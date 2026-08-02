@@ -167,7 +167,7 @@ script script_remix_1_main
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
-    call marching_orders_sub_08a8386c
+    call marching_orders_sub_08a8386c_nobeat
     call marching_orders_sub_08a83998
 
     load_karate_man
@@ -202,7 +202,7 @@ script script_remix_1_main
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
-    call marching_orders_sub_08a8386c
+    call marching_orders_sub_08a8386c_nobeat
     call marching_orders_sub_08a83998
 
     load_karate_man
