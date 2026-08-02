@@ -1929,7 +1929,7 @@ SECTIONS {
         build/audio/sequences/s_f_neko6.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_zentai.mid.o(.rodata*);
 		build/audio/sequences/s_f_marcher2_v_zentai_ten.mid.o(.rodata*);
-		build/audio/sequences/s_f_marcher2_v_zentai_ttion_.mid.o(.rodata*);
+		build/audio/sequences/s_f_marcher2_v_zentai_ttion.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_susume.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_tomare.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_migimukeL.mid.o(.rodata*);
