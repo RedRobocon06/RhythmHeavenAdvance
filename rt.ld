@@ -1928,13 +1928,19 @@ SECTIONS {
         build/audio/sequences/s_f_neko5.mid.o(.rodata*);
         build/audio/sequences/s_f_neko6.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_zentai.mid.o(.rodata*);
+		build/audio/sequences/s_f_marcher2_v_zentai_ten.mid.o(.rodata*);
+		build/audio/sequences/s_f_marcher2_v_zentai_ttion_.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_susume.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_tomare.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_migimukeL.mid.o(.rodata*);
+        build/audio/sequences/s_f_marcher2_v_migimukeL_face.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_migimukeS.mid.o(.rodata*);
+        build/audio/sequences/s_f_marcher2_v_migimukeS2.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_migi.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_hidarimukeL.mid.o(.rodata*);
+        build/audio/sequences/s_f_marcher2_v_hidarimukeL_face.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_hidarimukeS.mid.o(.rodata*);
+		build/audio/sequences/s_f_marcher2_v_hidarimukeS2.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_hidari.mid.o(.rodata*);
         
         build/graphics/gameplay/gameplay_unused_warioware_graphics.c.o(.data*);
