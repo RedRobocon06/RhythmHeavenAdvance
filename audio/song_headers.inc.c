@@ -5364,9 +5364,9 @@ struct SongHeader s_check_result_bgm_seqData = {
     /* Song Number   */ 1798
 };
 
-extern const u8 s_lesson_sel_bgm_mid[];
+extern const u8 s_lesson_sel_bgm_en_mid[];
 struct SongHeader s_lesson_sel_bgm_seqData = {
-    /* MIDI Sequence */ s_lesson_sel_bgm_mid,
+    /* MIDI Sequence */ s_lesson_sel_bgm_en_mid,
     /* Sound Player  */ MUSIC_PLAYER_0,
     /* Bank Number   */ INST_BANK_46,
     /* Volume        */ 100,

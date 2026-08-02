@@ -1672,6 +1672,7 @@ SECTIONS {
         build/audio/sequences/s_virus_osii.mid.o(.rodata*);
         build/audio/sequences/s_check_result_bgm.mid.o(.rodata*);
         build/audio/sequences/s_lesson_sel_bgm.mid.o(.rodata*);
+        build/audio/sequences/s_lesson_sel_bgm_en.mid.o(.rodata*);
         build/audio/sequences/s_toys_bgm.mid.o(.rodata*);
         build/audio/sequences/s_rap_machine_bgm.mid.o(.rodata*);
         build/audio/sequences/s_mini_game_bgm.mid.o(.rodata*);
