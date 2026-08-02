@@ -1948,6 +1948,10 @@ SECTIONS {
         build/audio/sequences/s_f_marcher2_v_hidarimukeS.mid.o(.rodata*);
 		build/audio/sequences/s_f_marcher2_v_hidarimukeS2.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_hidari.mid.o(.rodata*);
+        build/audio/sequences/s_f_rapW_v_YoOyatuDesuka_en.mid.o(.rodata*);
+        build/audio/sequences/s_f_rapW_v_Yo10JiDesuka_en.mid.o(.rodata*);
+        build/audio/sequences/s_f_rapW_v_OyatuwaSaiko_en.mid.o(.rodata*);
+        build/audio/sequences/s_f_rapW_v_DarenimoNaisho_en.mid.o(.rodata*);
         
         build/graphics/gameplay/gameplay_unused_warioware_graphics.c.o(.data*);
         build/games/sneaky_spirits/graphics/sneaky_spirits_obj.4bpp.s.o(.data*);

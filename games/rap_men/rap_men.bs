@@ -901,6 +901,7 @@ script script_rap_men_practice
     rest 24
     spawn_cue CUE_UN
     rest 24
+    clear_text_f
     play_sfx s_intro_uh_seqData
     beat_anim
     rest 24
@@ -919,6 +920,7 @@ script script_rap_men_practice
     rest 24
     spawn_cue CUE_UN
     rest 24
+    clear_text_f
     play_sfx s_intro_uh_seqData
     beat_anim
     rest 24
@@ -987,6 +989,7 @@ script script_rap_men_practice
         beat_anim
         rest 24
         rest 24
+        clear_text_f
         play_sfx s_rap_wakari_desuka_seqData
         rap_men_animate_rapper ANIM_DESUKA
         beat_anim
@@ -1006,6 +1009,7 @@ script script_rap_men_practice
         beat_anim
         rest 24
         rest 24
+        clear_text_f
         play_sfx s_rap_wakari_desuka_seqData
         rap_men_animate_rapper ANIM_DESUKA
         beat_anim

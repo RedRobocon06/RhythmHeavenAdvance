@@ -7944,7 +7944,7 @@ struct SongHeader s_f_ninja_v_nanu_seqData = {
     /* Song Number   */ 592
 };
 
-extern const u8 s_f_rapW_v_YoOyatuDesuka_mid[];
+extern const u8 s_f_rapW_v_YoOyatuDesuka_en_mid[];
 struct SongHeader s_f_rapW_v_YoOyatuDesuka_seqData = {
     /* MIDI Sequence */ s_f_rapW_v_YoOyatuDesuka_mid,
     /* Sound Player  */ SFX_PLAYER_4,
@@ -7956,7 +7956,7 @@ struct SongHeader s_f_rapW_v_YoOyatuDesuka_seqData = {
     /* Song Number   */ 600
 };
 
-extern const u8 s_f_rapW_v_Yo10JiDesuka_mid[];
+extern const u8 s_f_rapW_v_Yo10JiDesuka_en_mid[];
 struct SongHeader s_f_rapW_v_Yo10JiDesuka_seqData = {
     /* MIDI Sequence */ s_f_rapW_v_Yo10JiDesuka_mid,
     /* Sound Player  */ SFX_PLAYER_4,
@@ -8016,9 +8016,9 @@ struct SongHeader s_f_rapW_v_AketeIikamone_seqData = {
     /* Song Number   */ 606
 };
 
-extern const u8 s_f_rapW_v_OyatuwaSaiko_mid[];
+extern const u8 s_f_rapW_v_OyatuwaSaiko_en_mid[];
 struct SongHeader s_f_rapW_v_OyatuwaSaiko_seqData = {
-    /* MIDI Sequence */ s_f_rapW_v_OyatuwaSaiko_mid,
+    /* MIDI Sequence */ s_f_rapW_v_OyatuwaSaiko_en_mid,
     /* Sound Player  */ SFX_PLAYER_4,
     /* Bank Number   */ INST_BANK_56,
     /* Volume        */ 103,
@@ -8076,9 +8076,9 @@ struct SongHeader s_f_rapW_v_KareniwaNaisho_seqData = {
     /* Song Number   */ 611
 };
 
-extern const u8 s_f_rapW_v_DarenimoNaisho_mid[];
+extern const u8 s_f_rapW_v_DarenimoNaisho_en_mid[];
 struct SongHeader s_f_rapW_v_DarenimoNaisho_seqData = {
-    /* MIDI Sequence */ s_f_rapW_v_DarenimoNaisho_mid,
+    /* MIDI Sequence */ s_f_rapW_v_DarenimoNaisho_en_mid,
     /* Sound Player  */ SFX_PLAYER_4,
     /* Bank Number   */ INST_BANK_56,
     /* Volume        */ 103,
