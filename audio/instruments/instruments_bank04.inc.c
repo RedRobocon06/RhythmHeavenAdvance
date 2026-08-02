@@ -428,7 +428,7 @@ struct InstrumentPCM instrument_pcm_0109 = {
 };
 
 extern struct SampleData march_ord_2_data;
-struct InstrumentPCM instrument_pcm_0109 = {
+struct InstrumentPCM instrument_pcm_moA2 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
     /* Fast Read */ FALSE,
