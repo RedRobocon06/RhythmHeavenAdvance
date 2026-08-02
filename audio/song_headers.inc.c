@@ -8712,6 +8712,30 @@ struct SongHeader s_f_marcher2_v_zentai_seqData = {
     /* Song Number   */ 701
 };
 
+extern const u8 s_f_marcher2_v_zentai_ten_mid[];
+struct SongHeader s_f_marcher2_v_zentai_ten_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_zentai_ten_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 90,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_zentai_ten_seqName,
+    /* Song Number   */ 1928
+};
+
+extern const u8 s_f_marcher2_v_zentai_ttion_mid[];
+struct SongHeader s_f_marcher2_v_zentai_ttion_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_zentai_ttion_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 90,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_zentai_ttion_seqName,
+    /* Song Number   */ 1929
+};
+
 extern const u8 s_f_marcher2_v_susume_mid[];
 struct SongHeader s_f_marcher2_v_susume_seqData = {
     /* MIDI Sequence */ s_f_marcher2_v_susume_mid,
