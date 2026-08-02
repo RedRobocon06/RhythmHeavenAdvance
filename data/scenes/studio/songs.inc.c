@@ -228,7 +228,7 @@ struct StudioEntry studio_song_table[] = {
         /* Drum Script */ script_studio_game_select_1
     },
     /* DATA_ROOM */ {
-        /* Full Title  */ "Rhythm Archives",
+        /* Full Title  */ "Rhythm Reference",
         /* Short Title */ NULL,
         /* Drum Script */ script_studio_data_room
     },
