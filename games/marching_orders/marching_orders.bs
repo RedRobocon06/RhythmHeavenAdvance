@@ -124,7 +124,6 @@ script script_marching_orders_main
     rest 24
     rest 24
     rest 24
-    rest 24
     start_tracking_perfect_campaign
     call marching_orders_sub_08a83848
     set_marking_criteria 0
