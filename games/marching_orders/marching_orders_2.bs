@@ -189,7 +189,6 @@ script script_marching_orders_2_main
     call marching_orders_sub_08a8386c
     set_marking_criteria 2
     call marching_orders_2_sub_08a84088
-    rest 24
     clear_text_f
     set_marking_criteria 0
     call marching_orders_sub_08a8386c
