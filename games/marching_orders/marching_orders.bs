@@ -143,7 +143,7 @@ script script_marching_orders_main
     rest 24
     marching_orders_event00 258
     rest 24
-    marching_orders_event00 256
+    marching_orders_event00 258
     call marching_orders_sub_08a83848_beatstop
     set_marking_criteria 0
     call marching_orders_sub_08a8386c
@@ -158,19 +158,18 @@ script script_marching_orders_main
     rest 24
     marching_orders_event00 258
     rest 24
-    marching_orders_event00 256
+    marching_orders_event00 258
     call marching_orders_sub_08a83848_beatstop_nobeat
     set_marking_criteria 0
     call marching_orders_sub_08a83998
     set_marking_criteria 0
     call marching_orders_sub_08a8452c
-    clear_text_f
     rest 24
     marching_orders_event00 258
     rest 24
     marching_orders_event00 258
     rest 24
-    marching_orders_event00 256
+    marching_orders_event00 258
     call marching_orders_sub_08a83848_beatstop
     set_marking_criteria 0
     call marching_orders_sub_08a8386c
