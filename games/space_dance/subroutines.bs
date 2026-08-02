@@ -140,7 +140,7 @@ script cosmic_dance_sub_08a84e14
     spawn_cue CUE_TURN_RIGHT
     beat_anim
     rest 22
-    play_sfx s_space_ikeo_right_seqData
+    play_sfx s_space_ikeo_right_en_seqData
     rest 2
     space_dance_event00 0
     rest 8
@@ -159,7 +159,7 @@ script cosmic_dance_sub_08a84ef8
     spawn_cue CUE_TURN_RIGHT
     beat_anim
     rest 22
-    play_sfx s_space_ikeo_right_seqData
+    play_sfx s_space_ikeo_right_en_seqData
     rest 2
     space_dance_event00 0
     rest 8
