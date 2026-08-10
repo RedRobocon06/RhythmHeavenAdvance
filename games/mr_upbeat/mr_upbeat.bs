@@ -76,9 +76,9 @@ script mr_upbeat_sub_08a56c60
     play_sfx_vol s_intro_three_seqData, 384
     rest 12
     mr_upbeat_event02
-    rest 4
+    rest 3
     play_sfx_synced s_intro_four_seqData, 150, 384
-    rest 8
+    rest 9
     rest 12
     mr_upbeat_event02
     rest 6

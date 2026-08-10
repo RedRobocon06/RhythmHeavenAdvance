@@ -608,9 +608,9 @@ script script_karate_man_practice
         play_sfx s_intro_two_seqData
         rest 24
         play_sfx s_intro_three_seqData
-        rest 16
+        rest 15
         play_sfx_synced s_intro_four_seqData, 150, 256
-        rest 8
+        rest 9
         rest 24
         play_music s_karate_fan_seqData
         beat_anim
