@@ -50,7 +50,7 @@ endef
 NONMATCHING ?= 0
 
 # Revision to build
-REV ?= 1
+REV ?= 0
 
 ifeq ($(REV), 0)
     TARGET := rhythmheaven
