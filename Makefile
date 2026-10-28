@@ -53,10 +53,10 @@ NONMATCHING ?= 0
 REV ?= 1
 
 ifeq ($(REV), 0)
-    TARGET := rhythmheaven
+    TARGET := rhythmparadise
     TARGET_SHA1 := $(BASEROM_SHA1)
 else
-    TARGET := rhythmheaven_rev1
+    TARGET := rhythmparadise_rev1
     TARGET_SHA1 := $(REV1_SHA1)
     ifeq (,$(wildcard baserom_rev1.gba))
         $(error No ROM provided. Please place an unmodified Revision 1 ROM named "baserom_rev1.gba" in the root folder)
@@ -103,9 +103,9 @@ ALL_DIRS       := $(sort $(ALL_DIRS)) # remove duplicates
 BUILD_DIRS     := $(BUILD) $(addprefix $(BUILD)/,$(ALL_DIRS))
 
 ifeq ($(NONMATCHING), 0)
-    LD_SCRIPT := rh.ld
+    LD_SCRIPT := rp.ld
 else
-    LD_SCRIPT := rh_modern.ld
+    LD_SCRIPT := rp_modern.ld
 endif
 
 #---------------------------------------------------------------------------------
